@@ -22,10 +22,7 @@ if not os.path.exists(errlogs):
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
-  with open(listfile,"+r") as ff:
-	  idexclude=eval(ff.read())
-  if not idexclude:
-	  idexclude=[]
+  idexclude=os.environ['Showswatching']
   rune=os.environ['Rune']
   hooklink=os.environ['Hooksecret']
   showid=eval(os.environ['Getlistonline'])
@@ -64,9 +61,7 @@ try:
 				nam=show['media']['title']['romaji']
 				if nam not in showlist:
 					showlist.append(nam)
-		if idexclude!=showlist and showlist!=[]:
-			with open(listfile,"w") as ff:
-				ff.write(str(showlist))
+		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
