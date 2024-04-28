@@ -51,7 +51,7 @@ query ($id: Int) {
 '''
 try:
 	if showid:
-		ids=eval(os.environ('Idlist'))
+		ids=eval(os.environ['Idlist'])
 		url = 'https://graphql.anilist.co'
 		showlist=[]
 		for idd in ids:
