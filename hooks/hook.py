@@ -25,7 +25,7 @@ try:
   idexclude = eval(os.environ["Showswatching"])
   rune=os.environ['Rune']
   hooklink=os.environ['Hooksecret']
-  showid=eval(os.getenv('Getlistonline'))
+  showid=eval(os.environ['Getlistonline'])
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
