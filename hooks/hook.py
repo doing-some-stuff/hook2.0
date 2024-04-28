@@ -62,8 +62,9 @@ try:
 				if nam not in showlist:
 					showlist.append(nam)
 		if idexclude!=showlist and showlist!=[]:
-			os.environ["Showswatching"] = str(showlist)
-			dotenv.set_key(dotenv_file, "Showswatching", os.environ["Showswatching"])
+			with open(errlogs,"a+") as ff:
+				err=f"{str(showlist)}\n"
+				ff.write(err)
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
