@@ -62,9 +62,9 @@ try:
 				if nam not in showlist:
 					showlist.append(nam)
 		if idexclude!=showlist and showlist!=[]:
-			with open(".env","r+") as ff:
+			with open("./hooks/.env","r+") as ff:
 				envdata=ff.readlines()
-			with open(".env","w+") as ff:
+			with open("./hooks/.env","w+") as ff:
 				envdata[0]=f"Showswatching={str(showlist)}\n"
 				ff.write(''.join(envdata))
 except Exception as ee:
