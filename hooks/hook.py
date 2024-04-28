@@ -65,7 +65,7 @@ try:
 				if nam not in showlist:
 					showlist.append(nam)
 		if idexclude!=showlist and showlist!=[]:
-			with open(listfile,"+w") as ff:
+			with open(listfile,"w") as ff:
 				ff.write(str(showlist))
 except Exception as ee:
   with open(errlogs,"a+") as ff:
