@@ -64,7 +64,7 @@ try:
 		if idexclude!=showlist and showlist!=[]:
 			with open("./hooks/.env","w+") as ff:
 				envdata=ff.readlines()
-				envdata[0]=f"Showswatching={str(showlist}\n"
+				envdata[0]=f"Showswatching={str(showlist)}\n"
 				ff.write(''.join(envdata))
 except Exception as ee:
   with open(errlogs,"a+") as ff:
