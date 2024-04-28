@@ -11,7 +11,6 @@ from selenium.webdriver.firefox.options import Options
 
 sentlogs="./hooks/hook/contentlist.log"
 errlogs="./hooks/hook/err.log"
-listfile="./hooks/hook/showlist.txt"
 if not os.path.exists(sentlogs):
   with open(sentlogs,"w") as ff:
     pass
@@ -22,7 +21,7 @@ if not os.path.exists(errlogs):
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
-  idexclude=os.environ['Showswatching']
+  idexclude=eval(os.environ['Showswatching'])
   rune=os.environ['Rune']
   hooklink=os.environ['Hooksecret']
   showid=eval(os.environ['Getlistonline'])
