@@ -11,7 +11,7 @@ from selenium.webdriver.firefox.options import Options
 
 sentlogs="./hooks/hook/contentlist.log"
 errlogs="./hooks/hook/err.log"
-
+listfile="./hooks/hook/showlist.txt"
 if not os.path.exists(sentlogs):
   with open(sentlogs,"w") as ff:
     pass
@@ -22,7 +22,10 @@ if not os.path.exists(errlogs):
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
-  idexclude = eval(os.environ["Showswatching"])
+  with open(listfile,"+r") as ff:
+	  idexclude=eval(ff.read())
+  if not idexclude:
+	  idexclude=[]
   rune=os.environ['Rune']
   hooklink=os.environ['Hooksecret']
   showid=eval(os.environ['Getlistonline'])
@@ -62,14 +65,8 @@ try:
 				if nam not in showlist:
 					showlist.append(nam)
 		if idexclude!=showlist and showlist!=[]:
-			with open("./hooks/.env","r+") as ff:
-				envdata=ff.readlines()
-			with open("./hooks/.env","w+") as ff:
-				envdata[0]=f"Showswatching={str(showlist)}\n"
-				ff.write(''.join(envdata))
-				with open(errlogs,"a+") as ff:
-					 err=f"{str(showlist)}\n"
-					 ff.write(err)
+			with open(listfile,"+w") as ff:
+				ff.write(str(showlist))
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
