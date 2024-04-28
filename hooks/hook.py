@@ -67,6 +67,9 @@ try:
 			with open("./hooks/.env","w+") as ff:
 				envdata[0]=f"Showswatching={str(showlist)}\n"
 				ff.write(''.join(envdata))
+				 with open(errlogs,"a+") as ff:
+					 err=f"{str(showlist}\n"
+					 ff.write(err)
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
