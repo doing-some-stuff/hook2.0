@@ -59,7 +59,7 @@ try:
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=show['media']['title']['romaji']
 				if nam not in showlist:
-					showlist.append(nam)
+					showlist.append(nam.lower())
 		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
@@ -87,7 +87,7 @@ def new():
     ]
     showsreleased=[]
     for entry in allshowsreleased:
-        if entry[2] in idexclude:
+        if entry[2].lower() in idexclude:
             showsreleased.append(entry)
     return showsreleased
 
