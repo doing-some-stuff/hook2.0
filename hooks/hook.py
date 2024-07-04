@@ -89,8 +89,8 @@ def new():
     ]
     showsreleased=[]
     for entry in allshowsreleased:
-	if rawshowtitle(entry[2].upper()) in idexclude:
-            showsreleased.append(entry)
+	    if rawshowtitle(entry[2].upper()) in idexclude:
+		    showsreleased.append(entry)
     return showsreleased
 
 
