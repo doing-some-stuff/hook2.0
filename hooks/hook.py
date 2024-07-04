@@ -17,6 +17,8 @@ if not os.path.exists(sentlogs):
 if not os.path.exists(errlogs):
     with open(errlogs,"w") as ff:
         pass
+def rawshowtitle(title):
+    return ''.join(a for a in title if a.isalnum())
 
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
@@ -59,13 +61,13 @@ try:
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=show['media']['title']['romaji']
 				if nam not in showlist:
-					showlist.append(nam.upper())
+					showlist.append(rawshowtitle(nam.upper()))
 		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
-      
+	  
 def new():
     link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
@@ -87,7 +89,7 @@ def new():
     ]
     showsreleased=[]
     for entry in allshowsreleased:
-        if entry[2].upper() in idexclude:
+	if rawshowtitle(entry[2].upper()) in idexclude:
             showsreleased.append(entry)
     return showsreleased
 
