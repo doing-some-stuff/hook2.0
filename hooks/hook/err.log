@@ -41,3 +41,4 @@
 2024-07-29 22:36:31.107169||Err: 'NoneType' object is not subscriptable
 2024-07-29 22:44:54.956752||Err: 'NoneType' object is not subscriptable
 2024-07-29 22:53:14.048394||Err: 'NoneType' object is not subscriptable
+2024-07-29 23:08:08.068392||Err: Expecting value: line 1 column 1 (char 0)
