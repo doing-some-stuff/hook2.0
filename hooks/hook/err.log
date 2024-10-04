@@ -48,3 +48,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2024-10-03 17:44:18.280526||Err: 'data'
 2024-10-03 19:22:53.182647||Err: list index out of range
 2024-10-03 19:57:38.631923||Err: list index out of range
+2024-10-04 15:44:08.760152||Err: list index out of range
