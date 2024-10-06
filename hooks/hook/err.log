@@ -13,3 +13,4 @@ WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
 TimeoutError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:740:5
 bail@chrome://remote/content/marionette/sync.sys.mjs:211:19
 
+2024-10-06 15:14:46.847113||Err: 'NoneType' object is not subscriptable
