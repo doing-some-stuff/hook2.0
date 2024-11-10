@@ -144,3 +144,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2024-11-10 21:28:58.705111||Err: list index out of range
 2024-11-10 21:37:55.034302||Err: 'NoneType' object is not subscriptable
 2024-11-10 21:46:23.595288||Err: 'NoneType' object is not subscriptable
+2024-11-10 21:55:01.416404||Err: 'NoneType' object is not subscriptable
