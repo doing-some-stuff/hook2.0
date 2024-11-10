@@ -116,3 +116,5 @@
 2024-11-10 18:31:52.648943||Err: 'NoneType' object is not subscriptable
 2024-11-10 18:42:54.758857||Err: 'NoneType' object is not subscriptable
 2024-11-10 18:51:22.645887||Err: 'NoneType' object is not subscriptable
+2024-11-10 18:59:44.137280||Err: 'NoneType' object is not subscriptable
+2024-11-10 18:59:58.208183||Err: list index out of range
