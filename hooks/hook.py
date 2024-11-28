@@ -43,6 +43,7 @@ query ($id: Int) {
       media {
         title {
           romaji
+	  english
         }
         siteUrl
       }
@@ -59,9 +60,11 @@ try:
 			variables = {'id': idd }
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
-				nam=show['media']['title']['romaji']
+				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
 				if nam not in showlist:
-					showlist.append(rawshowtitle(nam.upper()))
+					showlist.append(rawshowtitle(nam[0].upper()))
+					showlist.append(rawshowtitle(nams[1].upper()))
+					
 		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
