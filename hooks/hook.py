@@ -70,7 +70,7 @@ try:
 		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err[itsme]: {ee}\n"
+    err=f"{datetime.datetime.today()}||Err[itsme]: {showlist}\n"
     ff.write(err)
 	  
 def new():
