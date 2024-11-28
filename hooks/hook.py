@@ -61,7 +61,7 @@ try:
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
-				if nam not in showlist:
+				if nam[0] not in showlist:
 					showlist.append(rawshowtitle(nam[0].upper()))
 					showlist.append(rawshowtitle(nam[1].upper()))
 					
