@@ -23,3 +23,5 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2024-11-28 14:53:44.543807||Err: list index out of range
 2024-11-28 17:58:06.834379||Err: name 'nams' is not defined
 2024-11-28 17:59:26.688566||Err: name 'nams' is not defined
+2024-11-28 18:37:16.645840||Err: unhashable type: 'list'
+2024-11-28 18:37:24.756435||Err: list indices must be integers or slices, not str
