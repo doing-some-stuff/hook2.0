@@ -34,3 +34,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2024-11-28 18:56:00.091238||Err[itsme]: {'eng': [], 'romaji': [], 'romajii': []}
 2024-11-28 18:56:04.543267||Err: list indices must be integers or slices, not str
 2024-11-28 19:24:08.377583||Err: list index out of range
+2024-11-28 22:12:20.303183||Err: list index out of range
