@@ -27,3 +27,5 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2024-11-28 18:37:24.756435||Err: list indices must be integers or slices, not str
 2024-11-28 18:42:29.709682||Err[itsme]: unhashable type: 'list'
 2024-11-28 18:42:40.876276||Err: list indices must be integers or slices, not str
+2024-11-28 18:47:15.502718||Err[itsme]: unhashable type: 'list'
+2024-11-28 18:47:20.869708||Err: list indices must be integers or slices, not str
