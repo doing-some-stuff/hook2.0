@@ -65,11 +65,12 @@ try:
 					showlist['romajii'].append(rawshowtitle(nam[0].upper()))
 					showlist['eng'].append(rawshowtitle(nam[1].upper()))
 					showlist['romaji'].append(nam[0])
+			
 					
 		idexclude=showlist
 except Exception as ee:
   with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err: {ee}\n"
+    err=f"{datetime.datetime.today()}||Err[itsme]: {ee}\n"
     ff.write(err)
 	  
 def new():
