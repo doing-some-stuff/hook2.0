@@ -55,17 +55,15 @@ try:
 	if showid:
 		ids=eval(os.environ['Idlist'])
 		url = 'https://graphql.anilist.co'
-		showlist={'eng':[],'romaji':[],'romajii':[]}
+		showlist=[]
 		for idd in ids:
 			variables = {'id': idd }
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
-				if nam[0] not in showlist['romaji']:
-					showlist['romajii'].append(rawshowtitle(nam[0].upper()))
-					showlist['eng'].append(rawshowtitle(nam[1].upper()))
-					showlist['romaji'].append(nam[0])
-			
+				if nam not in showlist:
+					showlist.append(rawshowtitle(nam[0].upper()))
+					showlist.append(rawshowtitle(nam[1].upper()))
 					
 		idexclude=showlist
 except Exception as ee:
@@ -94,12 +92,7 @@ def new():
     ]
     showsreleased=[]
     for entry in allshowsreleased:
-	    title=rawshowtitle(entry[2].upper())
-	    if title in idexclude['romajii']:
-		    showsreleased.append(entry)
-	    
-	    if title in idexclude['eng']:
-		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
+	    if rawshowtitle(entry[2].upper()) in idexclude:
 		    showsreleased.append(entry)
 		    
     return showsreleased
