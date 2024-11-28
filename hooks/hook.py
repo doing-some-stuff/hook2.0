@@ -63,7 +63,7 @@ try:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
 				if nam not in showlist:
 					showlist.append(rawshowtitle(nam[0].upper()))
-					showlist.append(rawshowtitle(nams[1].upper()))
+					showlist.append(rawshowtitle(nam[1].upper()))
 					
 		idexclude=showlist
 except Exception as ee:
