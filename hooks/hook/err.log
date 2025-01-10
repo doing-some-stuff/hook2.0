@@ -14,3 +14,5 @@
 2025-01-09 22:50:51.802980||Err: list index out of range
 2025-01-10 04:44:48.910478||Err: list index out of range
 2025-01-10 07:52:44.762127||Err: list index out of range
+2025-01-10 13:13:39.657917||Err: unhashable type: 'list'
+2025-01-10 13:13:54.596104||Err: list indices must be integers or slices, not str
