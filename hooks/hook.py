@@ -61,10 +61,11 @@ try:
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
-				if nam not in showlist:
+				if nam[0] not in showlist['romaji']:
 					showlist['romajii'].append(rawshowtitle(nam[0].upper()))
 					showlist['eng'].append(rawshowtitle(nam[1].upper()))
 					showlist['romaji'].append(nam[0])
+			
 					
 		idexclude=showlist
 except Exception as ee:
