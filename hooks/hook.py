@@ -97,6 +97,7 @@ def new():
 	    title=rawshowtitle(entry[2].upper())
 	    if title in idexclude['romajii']:
 		    showsreleased.append(entry)
+		    continue
 	    
 	    if title in idexclude['eng']:
 		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
