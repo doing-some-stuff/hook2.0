@@ -28,3 +28,5 @@
 2025-02-08 16:57:47.661560||Err: list index out of range
 2025-02-08 17:14:01.489166||Err: 'data'
 2025-02-08 17:14:23.394583||Err: list index out of range
+2025-02-08 17:27:08.174748||Err: 'data'
+2025-02-08 17:27:35.107905||Err: list indices must be integers or slices, not str
