@@ -6,3 +6,5 @@
 2025-02-14 15:34:21.866756||Err: list index out of range
 2025-02-14 22:49:35.174337||Err: list index out of range
 2025-02-15 14:25:40.921783||Err: list index out of range
+2025-02-15 15:24:30.667271||Err: 'NoneType' object has no attribute 'upper'
+2025-02-15 15:24:46.432842||Err: list indices must be integers or slices, not str
