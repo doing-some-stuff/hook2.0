@@ -994,3 +994,5 @@
 2025-02-20 15:30:34.562817||Err: list indices must be integers or slices, not str
 2025-02-20 15:42:08.729599||Err: 'NoneType' object has no attribute 'upper'
 2025-02-20 15:42:22.520408||Err: list indices must be integers or slices, not str
+2025-02-20 15:50:42.762096||Err: 'NoneType' object has no attribute 'upper'
+2025-02-20 15:51:02.188956||Err: list indices must be integers or slices, not str
