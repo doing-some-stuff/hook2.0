@@ -13,3 +13,13 @@
 2025-03-04 13:47:12.131401||Err: list index out of range
 2025-03-04 17:31:14.428982||Err: list index out of range
 2025-03-04 18:47:29.991550||Err: list index out of range
+2025-03-04 19:25:12.331863||Err: Message: Reached error page: about:neterror?e=netTimeout&u=https%3A//animepahe.ru/api%3Fm%3Dairing%26page%3D1&c=UTF-8&d=The%20server%20at%20animepahe.ru%20is%20taking%20too%20long%20to%20respond.
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:869:5
+checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:58:24
+onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:345:39
+emit@resource://gre/modules/EventEmitter.sys.mjs:148:20
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+
