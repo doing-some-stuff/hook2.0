@@ -34,3 +34,4 @@ emit@resource://gre/modules/EventEmitter.sys.mjs:148:20
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
 
 2025-03-05 01:10:44.689883||Err: list index out of range
+2025-03-05 07:49:40.011118||Err: list index out of range
