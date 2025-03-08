@@ -20,3 +20,4 @@ onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:345:39
 emit@resource://gre/modules/EventEmitter.sys.mjs:148:20
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
 
+2025-03-08 21:12:55.867769||Err: list index out of range
