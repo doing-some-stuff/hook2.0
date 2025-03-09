@@ -33,3 +33,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2025-03-09 15:29:28.342335||Err: list index out of range
 2025-03-09 16:11:33.623950||Err: 'NoneType' object is not subscriptable
 2025-03-09 16:11:37.950368||Err: list indices must be integers or slices, not str
+2025-03-09 16:37:43.259797||Err: list index out of range
