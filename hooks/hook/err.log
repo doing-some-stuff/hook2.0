@@ -42,3 +42,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2025-03-09 18:20:56.775513||Err: 'data'
 2025-03-09 18:21:25.488447||Err: list indices must be integers or slices, not str
 2025-03-10 10:57:28.208424||Err: list index out of range
+2025-03-10 15:13:05.349132||Err: list index out of range
