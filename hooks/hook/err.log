@@ -7,3 +7,4 @@
 2025-03-21 23:57:35.741426||Err: list index out of range
 2025-03-22 05:14:09.198517||Err: 'NoneType' object is not subscriptable
 2025-03-22 05:14:21.923099||Err: list indices must be integers or slices, not str
+2025-03-22 12:41:42.460410||Err: list index out of range
