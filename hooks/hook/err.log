@@ -22,3 +22,5 @@
 2025-03-29 17:48:57.657162||Err: list indices must be integers or slices, not str
 2025-03-29 18:49:37.183346||Err: 'data'
 2025-03-29 18:49:49.779962||Err: list indices must be integers or slices, not str
+2025-03-29 19:52:27.622950||Err: 'data'
+2025-03-29 19:52:39.507266||Err: list indices must be integers or slices, not str
