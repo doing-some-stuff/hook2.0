@@ -43,3 +43,5 @@
 2025-03-31 22:00:22.999000||Err: list indices must be integers or slices, not str
 2025-04-01 14:50:34.991041||Err: list index out of range
 2025-04-01 18:33:16.191310||Err: list index out of range
+2025-04-01 19:16:54.476526||Err: 'data'
+2025-04-01 19:17:24.575346||Err: list indices must be integers or slices, not str
