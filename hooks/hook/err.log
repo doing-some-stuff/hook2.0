@@ -28,3 +28,5 @@
 2025-04-05 17:57:37.092453||Err: 'data'
 2025-04-05 17:57:55.580197||Err: list indices must be integers or slices, not str
 2025-04-05 18:49:23.714870||Err: list index out of range
+2025-04-05 19:41:04.583508||Err: 'NoneType' object is not subscriptable
+2025-04-05 19:41:16.937189||Err: list indices must be integers or slices, not str
