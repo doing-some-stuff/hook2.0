@@ -49,3 +49,4 @@
 2025-04-06 17:49:39.419242||Err: list index out of range
 2025-04-06 19:44:16.011122||Err: 'data'
 2025-04-06 19:44:20.748250||Err: list indices must be integers or slices, not str
+2025-04-06 20:09:27.591727||Err: list index out of range
