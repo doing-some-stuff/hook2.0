@@ -3944,3 +3944,4 @@ _onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
 2025-07-06 17:51:01.767726||Err: 'data'
 2025-07-06 17:51:14.231766||Err: list index out of range
 2025-07-06 17:59:50.933044||Err: list index out of range
+2025-07-06 18:33:45.968222||Err: list index out of range
