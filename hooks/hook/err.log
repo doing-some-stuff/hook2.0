@@ -5925,3 +5925,4 @@ _onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
 2025-08-06 16:50:37.450139||Err: 'NoneType' object is not subscriptable
 2025-08-06 16:51:08.939956||Err: list index out of range
 2025-08-06 17:13:03.449276||Err: list index out of range
+2025-08-06 17:39:33.675282||Err: list index out of range
