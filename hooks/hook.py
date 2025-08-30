@@ -86,10 +86,10 @@ def news():
 	options.add_argument("--headless")
 	pageviewer=wdr.Firefox(options=options)
 	pageviewer.get(link)
-	WebDriverWait(pageviewer,10)
+	WebDriverWait(pageviewer,20)
 	pageviewer.refresh()
 	rawcontent=pageviewer.page_source
-	with open(sentlogs,"w") as ff:
+	with open(errlogs,"w") as ff:
 		ff.write("\n")
 		ff.write(str(rawcontent))
 	
