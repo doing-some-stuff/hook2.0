@@ -101,7 +101,7 @@ def new():
     pageviewer.get(link)
     WebDriverWait(pageviewer, 8)
     pageviewer.refresh()
-    rawcontent=pageviewer.page_source
+    print(pageviewer.page_source)
     jsoncontent=re.findall('<div id="json">(.*?)</div></div>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
