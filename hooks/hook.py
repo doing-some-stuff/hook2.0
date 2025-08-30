@@ -95,8 +95,7 @@ def news():
 	
 	
 def new():
-    link = 'https://animepahe.com/api?m=airing&page=1'
-	print("yess")
+	link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
     options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
