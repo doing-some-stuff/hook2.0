@@ -1,56 +1,43 @@
 
-<html><head>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<script src="/check/ua-parser.min.js?version=1"></script>
-<script src="/check/iife.min.js"></script>
-<script src="/check/check2.js?version=3"></script>
-<title> X Cancelled | Verifying your request</title>
-<style type="text/css">
-html, body {/*width: 100%; height: 100%;*/ margin: 0; padding: 0; overflow-wrap: break-word; word-wrap: break-word;}
-body {background-color: #1f1f1f; font-family: Helvetica, Arial, sans-serif; font-size: 100%;}
-h2 {color: #FF6C60;}
-h1 {font-size: 1.5em; color: #FF6C60; text-align: center;}
-p {font-size: 1em; color: #FF6C60; text-align: center; margin: 10px 0 0 0;}
-#spinner {margin: 0 auto 30px auto; display: block;}
-.attribution {margin-top: 20px;}
-@-webkit-keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-@keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-.bubbles { background-color: #FF6C60; width:15px; height: 15px; margin:2px; border-radius:100%; -webkit-animation:bubbles 0.6s 0.07s infinite ease-in-out; animation:bubbles 0.6s 0.07s infinite ease-in-out; -webkit-animation-fill-mode:both; animation-fill-mode:both; display:inline-block; }
-</style>
-<script type="text/javascript" charset="utf-8" data-cfasync="false">var __585196="HAuc2V0UmVxdWVzdEhlYWRlcignWC1SZXF1ZXN0ZWQtVGltZVN0YW1wLUNvbWJpbmF0aW9uJywgJycpOwogICAgICB4aHR0cC5zZXRSZXF1ZXN0SGVhZGVyKCdYLVJlcXVlc3RlZC1UeXBlJywgJ0dFVCcpOwogICAgICB4aHR0cC5zZXRSZXF1ZXN0SGVhZGVy";var _13396_="dmFyIGNoZWNrMSA9IHsiZGV0ZWN0aW9ucyIgOiBbXX07KGZ1bmN0aW9uKCl7CiAgdmFyIGEgPSBmdW5jdGlvbigpIHt0cnl7cmV0dXJuICEhd2luZG93LmFkZEV2ZW50TGlzdGVuZXJ9IGNhdGNoKGUpIHtyZXR1cm4gITF9IH0sCiAgYiA9IGZ1bmN0aW9uKG";var _815464="yLnRpbWVab25lKSB7CiAgICAgICAgICAgICAgICAgIGZwV29ya2VyVmFsaWRhdGUgPSB0cnVlOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9KS5jYXRjaChmdW5jdGlvbiAocmVzdWx0KSB7CiAgICAgICAgICAgICAgZnBXb3JrZXJWYWxpZGF0ZS";var __157691="aWYobmF2aWdhdG9yLmNvb2tpZUVuYWJsZWQpeyovCi8qaWYoZG9jdW1lbnQuY29va2llLm1hdGNoKC9eKD86Lio7KT9ccypbMC05YS1mXXszMn1ccyo9XHMqKFteO10rKSg/Oi4qKT8kLykpeyovLypIdHRwT25seSBDb29raWUgZmxhZ3MgcHJldmVudCB0aGl";var __4096_5="HhodHRwLnJlYWR5U3RhdGUgPT09IDQpIHsKICAgICAgICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInN0YXR1cyIpLmlubmVySFRNTCA9ICJSZWZyZXNoIHlvdXIgcGFnZS4iOwogICAgICAgICAgICAgICAgICBsb2NhdGlvbi5yZWxvYWQo";var __7351_="uZG93U2NvcGVVc2VyQWdlbnQgPSB1YXAuc2V0VUEocmVzdWx0LndpbmRvd1Njb3BlLnVzZXJBZ2VudCkuZ2V0UmVzdWx0KCk7CiAgICAgICAgICAgICAgdmFyIHNlcnZpY2V3b3JrZXJVc2VyQWdlbnQgPSB1YXAuc2V0VUEocmVzdWx0LnNlcnZpY2VXb3JrZX";var _43445_="ICAgICAgICAgICAgICAgJiYgcmVzdWx0LndpbmRvd1Njb3BlLmVuZ2luZSA9PT0gcmVzdWx0LnNlcnZpY2VXb3JrZXIuZW5naW5lCiAgICAgICAgICAgICAgICAmJiByZXN1bHQud2luZG93U2NvcGUudGltZVpvbmUgPT09IHJlc3VsdC5zZXJ2aWNlV29ya2V";var _745066="RvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGllbnRIZWlnaHQgfHwgZG9jdW1lbnQuYm9keS5jbGllbnRIZWlnaHQgfHwgMDsKaWYgKChzdyA9PSB3dykgJiYgKHNoID09IHdoKSkgewogICAgdiA9IHRydWU7CiAgICBpZiAoISh3dyAlIDIwMCkgJiYgKHdoI";var __29_214="IudXNlckFnZW50KS5nZXRSZXN1bHQoKTsKICAgICAgICAgICAgICBpZiAocmVzdWx0LnNlcnZpY2VXb3JrZXIgPT09IHVuZGVmaW5lZCAmJiAic2hhcmVkV29ya2VyIiBpbiBuYXZpZ2F0b3IgPT09IGZhbHNlKSB7CiAgICAgICAgICAgICAgICBmcFdvcmtlc";var __354764="yBVQVBhcnNlcigpOwogICAgICBib3RkUHJvbWlzZQogICAgICAgIC50aGVuKGZ1bmN0aW9uIChmcCkgewogICAgICAgICAgICByZXR1cm4gZnAuZGV0ZWN0KCk7CiAgICAgICAgICB9KQogICAgICAgIC50aGVuKGZ1bmN0aW9uIChyZXN1bHQpIHsKICAgICAg";var ___60069="Kc2ggPSBzY3JlZW4uaGVpZ2h0Owp3dyA9IHdpbmRvdy5pbm5lcldpZHRoIHx8IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGllbnRXaWR0aCB8fCBkb2N1bWVudC5ib2R5LmNsaWVudFdpZHRoIHx8IDA7CndoID0gd2luZG93LmlubmVySGVpZ2h0IHx8IG";var _06__92="a2g5S3I1TTRTeTEtdGUxcDNBSjVRJywgJzBxZk5hWFc3dW1yeEFsY0xMTjBWWUpHVWZZJyk7Cn0KICAgICAgICAgICAgICB4aHR0cC5zZXRSZXF1ZXN0SGVhZGVyKCJDb250ZW50LXR5cGUiLCAiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIik";var _286548="CA9IDE7CiAgICB2YXIgZG93bmxvYWRUaW1lciA9IHNldEludGVydmFsKGZ1bmN0aW9uKCl7CiAgICAgIHRpbWVsZWZ0LS07CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJjb3VudGRvd250aW1lciIpLnRleHRDb250ZW50ID0gdGltZWxlZnQ7CiAg";var __925601="ICAgIHZhciBmcFdvcmtlclZhbGlkYXRlID0gZmFsc2U7CiAgICAgICAgICBpZiAoInNlcnZpY2VXb3JrZXIiIGluIG5hdmlnYXRvcikgewogICAgICAgICAgICBmcHdvcmtlci50aGVuKGZ1bmN0aW9uIChyZXN1bHQpIHsKICAgICAgICAgICAgICB2YXIgd2l";var __422545="A9IHRydWU7CiAgICAgICAgICAgIH0pCiAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBmcFdvcmtlclZhbGlkYXRlID0gdHJ1ZTsKICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbiAoKSB7CiAgICAgICAgICAgI";var ___29036="pey8qbm9kZWpzKi8KaWYoIXdpbmRvdy5lbWl0KXsvKmNvdWNoanMqLwppZighd2luZG93LnNwYXduKXsvKnJoaW5vKi8KaWYoIXdpbmRvdy53ZWJkcml2ZXIpey8qc2VsZW5pdW0qLwppZighd2luZG93LmRvbUF1dG9tYXRpb24gfHwgIXdpbmRvdy5kb21BdX";var _9_6094="AnOyBleHBpcmVzPScgKyAnU2F0LCAzMC1BdWctMjUgMjE6NDQ6MTIgR01UJyArICc7IHBhdGg9Lyc7CiAgICAgIHZhciBib3RkUHJvbWlzZSA9IEJvdEQubG9hZCgpCiAgICAgIHZhciBib3RFeGNlcHRpb24gPSBmYWxzZTsKICAgICAgdmFyIHVhcCA9IG5ld";var __646178="KCdYLVJlcXVlc3RlZC1UeXBlLUNvbWJpbmF0aW9uJywgJ0dFVCcpOyAvL0VuY3J5cHRlZCBmb3IgdG9kYXlzIGRhdGUKICAgICAgeGh0dHAud2l0aENyZWRlbnRpYWxzID0gdHJ1ZTsKdmFyIHN3LCBzaCwgd3csIHdoLCB2OwpzdyA9IHNjcmVlbi53aWR0aDs";var __987495="GlmICgoIXJlc3VsdC5ib3QgfHwgcmVzdWx0LmJvdEtpbmQgPT09ICd1bmtub3duJykgJiYgY2hlY2sxLmRldGVjdGlvbnMubGVuZ3RoID09IDAgJiYgZnBXb3JrZXJWYWxpZGF0ZSA9PSB0cnVlKSB7CiAgICAgICAgICAgICAgaWYoIXdpbmRvdy5fcGhhbnRv";var __917271="BSZXF1ZXN0Jyk7CiAgICAgIHhodHRwLnNldFJlcXVlc3RIZWFkZXIoJ1gtUmVxdWVzdGVkLVRpbWVTdGFtcCcsICcnKTsKICAgICAgeGh0dHAuc2V0UmVxdWVzdEhlYWRlcignWC1SZXF1ZXN0ZWQtVGltZVN0YW1wLUV4cGlyZScsICcnKTsKICAgICAgeGh0d";var __149175="ICAgIGlmKHRpbWVsZWZ0IDw9IDApCiAgICAgIGNsZWFySW50ZXJ2YWwoZG93bmxvYWRUaW1lcik7CiAgICB9LDEwMDApOwogICAgc2V0VGltZW91dChmdW5jdGlvbigpewogICAgICB2YXIgbm93ID0gbmV3IERhdGUoKTsKICAgICAgdmFyIHRpbWUgPSBub3c";var __4_09_4="CUgMTAwKSkgewogICAgICAgIHYgPSB0cnVlOwogICAgfQp9Ci8vdiA9IHRydWU7IC8vdGVzdCB2YXIgbnVsbGVkIG91dCB1c2VkIGZvciBkZWJ1Z2dpbmcgcHVycG9zZQppZiAodiA9PSB0cnVlKSB7CiAgeGh0dHAuc2V0UmVxdWVzdEhlYWRlcignUHVsRjVh";var __120474="lZhbGlkYXRlID0gdHJ1ZTsKICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgaWYgKEpTT04uc3RyaW5naWZ5KHdpbmRvd1Njb3BlVXNlckFnZW50LmVuZ2luZSkgPT09IEpTT04uc3RyaW5naWZ5KHNlcnZpY2V3b3JrZXJVc2VyQWdlbnQuZW5naW5lKQog";var __991647="RvbWF0aW9uQ29udHJvbGxlcil7LypjaHJvbWl1bSBiYXNlZCBhdXRvbWF0aW9uIGRyaXZlciovCmlmKCF3aW5kb3cuZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmdldEF0dHJpYnV0ZSgid2ViZHJpdmVyIikpewovKmlmKG5hdmlnYXRvci51c2VyQWdlbnQpe";var __833650="bSB8fCAhd2luZG93LmNhbGxQaGFudG9tKXsvKnBoYW50b21qcyovCmlmKCF3aW5kb3cuX19waGFudG9tYXMpey8qcGhhbnRvbWFzIFBoYW50b21KUy1iYXNlZCB3ZWIgcGVyZiBtZXRyaWNzICsgbW9uaXRvcmluZyB0b29sKi8KaWYoIXdpbmRvdy5CdWZmZXI";var ____3139="zKi8KICAgICAgICAgICAgICB2YXIgXzMzNjY2Mj1wYXJzZUludCgiMjAyNTA4MjkiLCAxMCkgKyBwYXJzZUludCgiMjkwODIwMjUiLCAxMCk7CiAgICAgICAgICAgICAgLyp9Ki8KLyp9Ki8KfQovKn0qLwp9Cn0KfQp9Cn0KfQp9Cn0KICAgICAgICAgICAgIC";var __4890_7="yovCmlmKCEvYm90fGN1cmx8a29kaXx4Ym1jfHdnZXR8dXJsbGlifHB5dGhvbnx3aW5odHRwfGh0dHJhY2t8YWxleGF8aWFfYXJjaGl2ZXJ8ZmFjZWJvb2t8dHdpdHRlcnxsaW5rZWRpbnxwaW5nZG9tL2kudGVzdChuYXZpZ2F0b3IudXNlckFnZW50KSl7Ci8q";var __160036="AvL2VuZCBqYXZhc2NyaXB0IHB1enpsZQogICAgICAgICAgICAgIHZhciB4aHR0cCA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpOwogICAgICAgICAgICAgIHhodHRwLm9ucmVhZHlzdGF0ZWNoYW5nZSA9IGZ1bmN0aW9uKCkgewogICAgICAgICAgICAgICAgaWYgK";var _579941="dHJ1ZSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgfTsKICAgICAgICAgICAgICB4aHR0cC5vcGVuKCJQT1NUIiwgIi91bWFtdXN1bWVfZW5nIiwgdHJ1ZSk7CiAgICAgICAgICAgICAgeGh0dHAuc2V0UmVxdWVzdEhlYWRlcignSDRqcXBRUm1";var _632065="IsIGMpIHthKCkgPyBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJET01Db250ZW50TG9hZGVkIiwgYiwgYykgOiBkb2N1bWVudC5hdHRhY2hFdmVudCgib25yZWFkeXN0YXRlY2hhbmdlIiwgYil9OwogIGIoZnVuY3Rpb24oKXsKICAgIHZhciB0aW1lbGVmd";var ___740_1="TTWxuV2RkSXk4QXZyQUlVJywgXzMzNjY2Mik7IC8vbWFrZSB0aGUgYW5zd2VyIHdoYXQgZXZlciB0aGUgYnJvd3NlciBmaWd1cmVzIGl0IG91dCB0byBiZQogICAgICB4aHR0cC5zZXRSZXF1ZXN0SGVhZGVyKCdYLVJlcXVlc3RlZC13aXRoJywgJ1hNTEh0dH";var __321151="uZ2V0VGltZSgpOwogICAgICB0aW1lICs9IDMwMCAqIDEwMDA7CiAgICAgIG5vdy5zZXRUaW1lKHRpbWUpOwogICAgICBkb2N1bWVudC5jb29raWUgPSAneXNlbWNYT25aamNINGpBMlJ1UmpPdXBtR040PUhTOElhZlNRT0E1NUZvN0dzd3hYOFNXcU9BbycgKy";var __258569="7CiAgICAgICAgICAgICAgeGh0dHAuc2VuZCgibmFtZTE9SGVucnkmbmFtZTI9Rm9yZCIpOwogICAgICAgICAgICB9CiAgICAgICAgICB9LCA1MDApOwogICAgICAgICAgCiAgICAgICAgfSkKICAgICAgICAuY2F0Y2goKGVycm9yKSA9PiB7fSkKICAgICAgCi";var __698410="AgICB9LCAyMDAwKTsgLyppZiBjb3JyZWN0IGRhdGEgaGFzIGJlZW4gc2VudCB0aGVuIHRoZSBhdXRoIHJlc3BvbnNlIHdpbGwgYWxsb3cgYWNjZXNzKi8KICB9LCBmYWxzZSk7Cn0pKCk7Cg==";eval(decodeURIComponent(escape(window.atob(_13396_ + _632065 + _286548 + __149175 + __321151 + _9_6094 + __354764 + __925601 + __7351_ + __29_214 + __120474 + _43445_ + _815464 + __422545 + __987495 + __833650 + ___29036 + __991647 + __4890_7 + __157691 + ____3139 + __160036 + __4096_5 + _579941 + ___740_1 + __917271 + __585196 + __646178 + ___60069 + _745066 + __4_09_4 + _06__92 + __258569 + __698410))));</script></head>
-<body style="background-color:#1f1f1f;color:#1f1f1f;font-family:Arial,Helvetica,sans-serif;font-size:100%;">
-<div style="width:auto;margin:16px auto;border:1px solid #FF6C60;background-color:#1f1f1f;border-radius:3px 3px 3px 3px;padding:10px;">
-<br>
-<h1> X Cancelled | Verifying your request</h1>
-<p>
-<b>Sorry this pages exist in order to keep the service usable for everyone.</b>
-<br>
-<b>If you can't pass the test, please whitelist your extensions on this website and <b>update your browser</b>.</b>
-<br>
-<b>In case you really can't pass the test then email me at antibot [AT] xcancel [DOT] com with as much details as possible.</b>
-<br>
-<br>
-<b>Want to access the original Twitter/X link? <a href="https://x.com/umamusume_eng">click here</a></b>
-<br>
-<br>
-</p><center>
-<h2>Information :</h2>
-<br>
-<div id="status" style="color:#FF6C60;font-size:200%;">
-<noscript><meta http-equiv="refresh" content="0; url=/verify/index?url=/umamusume_eng" /></noscript>
-This process is automatic. Your browser will redirect to your requested content shortly.
-<br>
-Please allow up to <span id="countdowntimer">1</span> second…
-</div>
-<br>
-<br>
-</center>
-</div>
+<html lang="en"><head><title>Making sure you're not a bot!</title><link rel="stylesheet" href="/.within.website/x/xess/xess.min.css?cachebuster=v1.22.0-pre1-9-g4426498"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow"><style>
+        body,
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
+        .centered-div {
+            text-align: center;
+        }
 
+        #status {
+            font-variant-numeric: tabular-nums;
+        }
 
-</body></html>
+        #progress {
+          display: none;
+          width: 90%;
+          width: min(20rem, 90%);
+          height: 2rem;
+          border-radius: 1rem;
+          overflow: hidden;
+          margin: 1rem 0 2rem;
+					outline-offset: 2px;
+					outline: #b16286 solid 4px;
+				}
+
+        .bar-inner {
+            background-color: #b16286;
+            height: 100%;
+            width: 0;
+            transition: width 0.25s ease-in;
+        }
+    	</style><script id="anubis_version" type="application/json">"v1.22.0-pre1-9-g4426498"
+</script><script id="anubis_challenge" type="application/json">{"rules":{"algorithm":"fast","difficulty":2,"report_as":2},"challenge":{"id":"0198fcbe-7fbb-77d1-8adc-05ae01c01491","method":"fast","randomData":"2e1acd25896369d4ad2227b3b1578ceccd5f10b31aa5aba5d689213896cbec767d52adf29ccfd39823249ee019ea6df26fabb530b4e035f23d4b417d04a200f5","issuedAt":"2025-08-30T20:49:59.739514743Z","metadata":{"User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0","X-Real-Ip":"13.83.162.3"},"spent":false}}
+</script><script id="anubis_base_prefix" type="application/json">""
+</script><script id="anubis_public_url" type="application/json">""
+</script></head><body id="top"><main><h1 id="title" class="centered-div">Making sure you're not a bot!</h1><div class="centered-div"><img id="image" style="width:100%;max-width:256px;" src="/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=v1.22.0-pre1-9-g4426498"> <img style="display:none;" src="/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=v1.22.0-pre1-9-g4426498"><p id="status">Loading...</p><script async="" type="module" src="/.within.website/x/cmd/anubis/static/js/main.mjs?cacheBuster=v1.22.0-pre1-9-g4426498"></script><div id="progress" role="progressbar" aria-labelledby="status"><div class="bar-inner"></div></div><details><p>You are seeing this because the administrator of this website has set up Anubis to protect the server against the scourge of AI companies aggressively scraping websites. This can and does cause downtime for the websites, which makes their resources inaccessible for everyone.</p><p>Anubis is a compromise. Anubis uses a Proof-of-Work scheme in the vein of Hashcash, a proposed proof-of-work scheme for reducing email spam. The idea is that at individual scales the additional load is ignorable, but at mass scraper levels it adds up and makes scraping much more expensive.</p><p>Ultimately, this is a placeholder solution so that more time can be spent on fingerprinting and identifying headless browsers (EG: via how they do font rendering) so that the challenge proof of work page doesn't need to be presented to users that are much more likely to be legitimate.</p><p>Please note that Anubis requires the use of modern JavaScript features that plugins like JShelter will disable. Please disable JShelter or other such plugins for this domain.</p></details><noscript><p>Sadly, you must enable JavaScript to get past this challenge. This is required because AI companies have changed the social contract around how website hosting works. A no-JS solution is a work-in-progress.</p></noscript><div id="testarea"></div></div><footer><div class="centered-div"><p>Protected by <a href="https://github.com/TecharoHQ/anubis">Anubis</a> From <a href="https://techaro.lol">Techaro</a>. Made with ❤️ in 🇨🇦.</p><p>Mascot design by <a href="https://bsky.app/profile/celphase.bsky.social">CELPHASE</a>.</p><p>If you have any complaints or notes about the bot protection service, please contact <a href="mailto:webmaster@tiekoetter.com">webmaster@tiekoetter.com</a> -- <a href="/.within.website/x/cmd/anubis/api/imprint">Imprint</a></p><p>This website is running Anubis version <code>v1.22.0-pre1-9-g4426498</code>.</p></div></footer></main></body></html>
