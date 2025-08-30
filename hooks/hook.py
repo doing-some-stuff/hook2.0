@@ -76,18 +76,6 @@ except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
-def news():
-	link="https://nitter.tiekoetter.com/umamusume_eng"
-	options=Options()
-	options.add_argument("--headless")
-	pageviewer=wdr.Firefox(options=options)
-	pageviewer.get(link)
-	WebDriverWait(pageviewer,20)
-	pageviewer.refresh()
-	rawcontent=pageviewer.page_source
-	with open(errlogs,"w") as ff:
-		ff.write("\n")
-		ff.write(str(rawcontent))
 	
 def new():
     link = 'https://animepahe.com/api?m=airing&page=1'
@@ -153,7 +141,6 @@ try:
   hookgenerate(new())
   news()
 except Exception as ee:
-  print(ee)
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
