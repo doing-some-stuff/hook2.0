@@ -96,8 +96,7 @@ def news():
 def new():
     link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
-    options.add_argument("--headless")
-	options.add_argument('devtools.jsonview.enabled', False)
+    options.add_argument('devtools.jsonview.enabled', False)
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
     WebDriverWait(pageviewer, 8)
