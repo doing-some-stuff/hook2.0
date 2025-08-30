@@ -83,7 +83,7 @@ def new():
     options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
-    WebDriverWait(pageviewer, 8)
+    WebDriverWait(pageviewer, 15)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source
 
