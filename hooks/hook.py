@@ -24,9 +24,13 @@ dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
   idexclude=eval(os.environ['Showswatching'])
+  print(idexclude)
   rune=os.environ['Rune']
+  print(rune)
   hooklink=os.environ['Hooksecret']
+  print(hooklink)
   showid=eval(os.environ['Getlistonline'])
+  print(showid)
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
@@ -76,7 +80,20 @@ except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
-	  
+def news():
+	link="https://xcancel.com/umamusume_eng"
+	options=Options()
+	options.add_argument("--headless")
+	pageviewer=wdr.Firefox(options=options)
+	pageviewer.get(link)
+	WebDriverWait(pageviewer,10)
+	pageviewer.refresh()
+	rawcontent=pageviewer.page_source
+	with open(sentlogs,"w") as ff:
+		ff.write("\n")
+		ff.write(str(rawcontent))
+	
+	
 def new():
     link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
@@ -140,6 +157,7 @@ def hookgenerate(contentlist):
 
 try:
   hookgenerate(new())
+  news()
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
