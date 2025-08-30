@@ -24,13 +24,9 @@ dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
   idexclude=eval(os.environ['Showswatching'])
-  print(idexclude)
   rune=os.environ['Rune']
-  print(rune)
   hooklink=os.environ['Hooksecret']
-  print(hooklink)
   showid=eval(os.environ['Getlistonline'])
-  print(showid)
 except Exception as ee:  
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
