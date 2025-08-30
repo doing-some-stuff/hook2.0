@@ -95,6 +95,7 @@ def news():
 	
 	
 def new():
+	print("yess")
     link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
     options.add_argument("--headless")
@@ -128,6 +129,7 @@ def new():
 
 
 def hookgenerate(contentlist):
+  print("yes")
   with open(sentlogs,"+r") as ff:
     sentshows=ff.readlines()
   for show in contentlist:
