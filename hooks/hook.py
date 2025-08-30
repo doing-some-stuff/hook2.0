@@ -93,17 +93,15 @@ def news():
 		ff.write("\n")
 		ff.write(str(rawcontent))
 	
-	
 def new():
-	link = 'https://animepahe.com/api?m=airing&page=1'
+    link = 'https://animepahe.com/api?m=airing&page=1'
     options = Options()
     options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
-    WebDriverWait(pageviewer, 15)
+    WebDriverWait(pageviewer, 8)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source
-
     jsoncontent=re.findall('<div id="json">(.*?)</div></div>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
@@ -113,19 +111,19 @@ def new():
             x['anime_title'],x['snapshot']
         ] for x in response['data']
     ]
+	
     showsreleased=[]
     for entry in allshowsreleased:
 	    title=rawshowtitle(entry[2].upper())
 	    if title in idexclude['romajii']:
 		    showsreleased.append(entry)
 		    continue
-	    
+			
 	    if title in idexclude['eng']:
 		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
 		    showsreleased.append(entry)
-		    
+			
     return showsreleased
-
 
 def hookgenerate(contentlist):
   print("yes")
