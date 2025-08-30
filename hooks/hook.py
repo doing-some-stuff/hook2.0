@@ -77,12 +77,12 @@ except Exception as ee:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
 def news():
-	link="https://xcancel.com/umamusume_eng"
+	link="https://nitter.tiekoetter.com/umamusume_eng"
 	options=Options()
 	options.add_argument("--headless")
 	pageviewer=wdr.Firefox(options=options)
 	pageviewer.get(link)
-	WebDriverWait(pageviewer,40)
+	WebDriverWait(pageviewer,20)
 	pageviewer.refresh()
 	rawcontent=pageviewer.page_source
 	with open(errlogs,"w") as ff:
