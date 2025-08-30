@@ -31,8 +31,7 @@ try:
   print(hooklink)
   showid=eval(os.environ['Getlistonline'])
   print(showid)
-except Exception as ee:
-  print(ee)
+except Exception as ee:  
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
@@ -78,6 +77,7 @@ try:
 					
 		idexclude=showlist
 except Exception as ee:
+  print(ee)
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
