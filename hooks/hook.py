@@ -102,6 +102,7 @@ def new():
     WebDriverWait(pageviewer, 8)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source
+	print(rawcontent)
     jsoncontent=re.findall('<div id="json">(.*?)</div></div>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
@@ -126,7 +127,6 @@ def new():
     return showsreleased
 
 def hookgenerate(contentlist):
-  print("yes")
   with open(sentlogs,"+r") as ff:
     sentshows=ff.readlines()
   for show in contentlist:
