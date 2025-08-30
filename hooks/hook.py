@@ -76,8 +76,7 @@ try:
 			
 					
 		idexclude=showlist
-except Exception as ee:
-  print(ee)
+except Exception as ee:  
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
@@ -160,6 +159,7 @@ try:
   hookgenerate(new())
   news()
 except Exception as ee:
+  print(ee)
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err: {ee}\n"
     ff.write(err)
