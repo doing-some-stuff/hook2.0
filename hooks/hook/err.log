@@ -107,3 +107,5 @@
 2025-09-21 16:45:54.895028||Err: name 'news' is not defined
 2025-09-21 16:54:15.328949||Err: name 'news' is not defined
 2025-09-21 17:09:37.051855||Err: name 'news' is not defined
+2025-09-21 17:25:53.338054||Err: 'data'
+2025-09-21 17:26:05.547905||Err: list indices must be integers or slices, not str
