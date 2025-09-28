@@ -510,3 +510,5 @@
 2025-09-28 21:53:30.675002||Err: list indices must be integers or slices, not str
 2025-09-28 22:08:52.132207||Err: 'NoneType' object is not subscriptable
 2025-09-28 22:09:16.464283||Err: list indices must be integers or slices, not str
+2025-09-28 22:28:19.294374||Err: 'NoneType' object is not subscriptable
+2025-09-28 22:28:36.477330||Err: list indices must be integers or slices, not str
