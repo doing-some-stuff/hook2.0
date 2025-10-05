@@ -307,3 +307,4 @@
 2025-10-05 18:19:05.303822||Err: name 'news' is not defined
 2025-10-05 18:39:37.120870||Err: 'data'
 2025-10-05 18:39:51.791741||Err: list indices must be integers or slices, not str
+2025-10-05 18:49:34.325840||Err: name 'news' is not defined
