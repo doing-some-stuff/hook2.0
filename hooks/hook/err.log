@@ -672,3 +672,4 @@ _onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
 2025-10-09 19:24:59.472605||Err: name 'news' is not defined
 2025-10-09 19:34:48.809244||Err: name 'news' is not defined
 2025-10-09 19:43:27.085489||Err: name 'news' is not defined
+2025-10-09 19:52:04.400306||Err: name 'news' is not defined
