@@ -665,3 +665,4 @@ _onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
 2025-10-09 17:36:30.334122||Err: list index out of range
 2025-10-09 17:45:20.797314||Err: name 'news' is not defined
 2025-10-09 17:53:43.671197||Err: name 'news' is not defined
+2025-10-09 18:16:16.152549||Err: name 'news' is not defined
