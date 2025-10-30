@@ -30,3 +30,5 @@
 2025-10-30 21:48:04.783250||Err: name 'news' is not defined
 2025-10-30 21:56:30.459146||Err: name 'news' is not defined
 2025-10-30 22:16:40.959391||Err: name 'news' is not defined
+2025-10-30 22:33:58.402468||Err: Message: Failed to decode response from marionette
+
