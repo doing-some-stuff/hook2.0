@@ -240,3 +240,5 @@
 2025-11-18 11:29:32.127324||Err: name 'news' is not defined
 2025-11-18 11:41:12.150065||Err: Expecting value: line 1 column 1 (char 0)
 2025-11-18 11:41:39.642596||Err: list indices must be integers or slices, not str
+2025-11-18 11:49:34.602520||Err: Expecting value: line 1 column 1 (char 0)
+2025-11-18 11:49:56.906200||Err: list indices must be integers or slices, not str
