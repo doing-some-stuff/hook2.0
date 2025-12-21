@@ -11,3 +11,5 @@
 2025-12-21 19:13:19.966277||Err: name 'news' is not defined
 2025-12-21 19:27:01.942707||Err: name 'news' is not defined
 2025-12-21 19:37:22.070179||Err: name 'news' is not defined
+2025-12-21 19:45:18.788760||Err: 'NoneType' object is not subscriptable
+2025-12-21 19:45:47.004951||Err: list indices must be integers or slices, not str
