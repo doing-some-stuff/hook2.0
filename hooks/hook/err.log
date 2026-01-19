@@ -1863,3 +1863,17 @@
 2026-01-18 23:49:54.955372||Err: name 'news' is not defined
 2026-01-18 23:58:26.543620||Err: name 'news' is not defined
 2026-01-19 02:04:40.146561||Err: name 'news' is not defined
+2026-01-19 03:56:52.913509||Err: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:782:5
+assert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:169:4
+GeckoDriver.prototype.getPageSource@chrome://remote/content/marionette/driver.sys.mjs:1254:15
+dispatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
+
