@@ -1877,3 +1877,4 @@ onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
 onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
 _onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
 
+2026-01-19 04:51:40.963131||Err: name 'news' is not defined
