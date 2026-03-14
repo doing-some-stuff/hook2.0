@@ -8,3 +8,13 @@
 2026-03-14 19:53:15.334449||Err: name 'news' is not defined
 2026-03-14 20:15:09.534305||Err: name 'news' is not defined
 2026-03-14 20:46:13.638113||Err: name 'news' is not defined
+2026-03-14 21:04:16.750911||Err: Message: Reached error page: about:neterror?e=netTimeout&u=https%3A//animepahe.si/api%3Fm%3Dairing%26page%3D1&c=UTF-8&d=The%20server%20at%20animepahe.si%20is%20taking%20too%20long%20to%20respond.&a=
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:961:5
+checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:59:24
+onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:351:39
+emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+
