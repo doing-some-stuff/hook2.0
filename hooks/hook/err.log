@@ -18,3 +18,4 @@ onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:351:39
 emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
 
+2026-03-14 21:36:23.741333||Err: name 'news' is not defined
