@@ -19,3 +19,5 @@ emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
 
 2026-03-14 21:36:23.741333||Err: name 'news' is not defined
+2026-03-14 21:53:31.262306||Err: 'data'
+2026-03-14 21:53:48.258233||Err: list indices must be integers or slices, not str
