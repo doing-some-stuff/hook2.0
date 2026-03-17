@@ -111,3 +111,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2026-03-17 22:04:14.651185||Err: HTTPConnectionPool(host='localhost', port=54371): Read timed out. (read timeout=120)
 2026-03-17 22:46:16.440813||Err: name 'news' is not defined
 2026-03-17 23:17:19.484258||Err: name 'news' is not defined
+2026-03-17 23:48:55.338718||Err: name 'news' is not defined
