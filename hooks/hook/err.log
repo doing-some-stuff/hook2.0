@@ -3,3 +3,4 @@
 2026-03-24 16:18:24.411881||Err: list indices must be integers or slices, not str
 2026-03-24 17:16:40.252893||Err: 'data'
 2026-03-24 17:16:57.052809||Err: list indices must be integers or slices, not str
+2026-03-24 18:10:06.992498||Err: name 'news' is not defined
