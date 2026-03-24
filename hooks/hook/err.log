@@ -1,1 +1,3 @@
 2026-03-24 15:16:57.094869||Err: name 'news' is not defined
+2026-03-24 16:17:53.722178||Err: 'data'
+2026-03-24 16:18:24.411881||Err: list indices must be integers or slices, not str
