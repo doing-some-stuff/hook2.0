@@ -84,3 +84,5 @@
 2026-03-27 18:59:38.694469||Err: name 'news' is not defined
 2026-03-27 19:43:21.950872||Err: name 'news' is not defined
 2026-03-27 20:04:45.789324||Err: name 'news' is not defined
+2026-03-27 20:52:47.089822||Err: 'data'
+2026-03-27 20:52:54.592376||Err: list index out of range
