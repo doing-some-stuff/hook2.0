@@ -77,3 +77,5 @@
 2026-03-27 12:56:01.821946||Err: name 'news' is not defined
 2026-03-27 14:10:01.656692||Err: name 'news' is not defined
 2026-03-27 15:08:02.370840||Err: name 'news' is not defined
+2026-03-27 16:03:13.741548||Err: 'data'
+2026-03-27 16:03:21.645884||Err: list indices must be integers or slices, not str
