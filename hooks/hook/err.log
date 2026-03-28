@@ -120,3 +120,4 @@
 2026-03-28 19:02:22.617855||Err: 'data'
 2026-03-28 19:02:30.994567||Err: list indices must be integers or slices, not str
 2026-03-28 19:38:12.180418||Err: name 'news' is not defined
+2026-03-28 19:56:32.332565||Err: list index out of range
