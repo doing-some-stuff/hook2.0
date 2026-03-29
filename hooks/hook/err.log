@@ -151,3 +151,5 @@
 2026-03-29 15:42:37.103486||Err: 'data'
 2026-03-29 15:42:47.258779||Err: list indices must be integers or slices, not str
 2026-03-29 16:02:17.899851||Err: name 'news' is not defined
+2026-03-29 16:47:51.594764||Err: 'NoneType' object is not subscriptable
+2026-03-29 16:48:00.144254||Err: list index out of range
