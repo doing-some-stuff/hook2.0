@@ -159,3 +159,5 @@
 2026-03-29 17:50:33.742804||Err: list indices must be integers or slices, not str
 2026-03-29 18:21:34.123248||Err: 'NoneType' object is not subscriptable
 2026-03-29 18:21:41.693790||Err: list indices must be integers or slices, not str
+2026-03-29 19:05:12.717879||Err: 'NoneType' object is not subscriptable
+2026-03-29 19:05:21.360225||Err: list indices must be integers or slices, not str
