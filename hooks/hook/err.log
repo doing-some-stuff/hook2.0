@@ -148,3 +148,5 @@
 2026-03-29 14:40:15.200621||Err: list indices must be integers or slices, not str
 2026-03-29 15:03:38.029494||Err: 'data'
 2026-03-29 15:03:47.099260||Err: list indices must be integers or slices, not str
+2026-03-29 15:42:37.103486||Err: 'data'
+2026-03-29 15:42:47.258779||Err: list indices must be integers or slices, not str
