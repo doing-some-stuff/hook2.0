@@ -33,3 +33,4 @@
 2026-03-30 21:51:36.037538||Err: list indices must be integers or slices, not str
 2026-03-30 22:20:00.625811||Err: 'NoneType' object is not subscriptable
 2026-03-30 22:20:08.852445||Err: list indices must be integers or slices, not str
+2026-03-30 22:58:49.032950||Err: name 'news' is not defined
