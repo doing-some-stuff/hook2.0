@@ -27,3 +27,5 @@
 2026-03-30 19:35:29.780672||Err: list index out of range
 2026-03-30 20:07:46.776797||Err: 'NoneType' object is not subscriptable
 2026-03-30 20:07:52.237412||Err: list indices must be integers or slices, not str
+2026-03-30 21:00:00.071972||Err: 'NoneType' object is not subscriptable
+2026-03-30 21:00:08.098904||Err: list indices must be integers or slices, not str
