@@ -77,3 +77,13 @@ onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:351:39
 emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
 
+2026-04-01 14:03:31.573066||Err: Message: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//animepahe.si/api%3Fm%3Dairing%26page%3D1&c=UTF-8&d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20animepahe.si.&a=
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:961:5
+checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:59:24
+onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:351:39
+emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+
