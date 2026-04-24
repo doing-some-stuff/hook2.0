@@ -611,3 +611,5 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2026-04-24 19:04:03.251074||Err: name 'news' is not defined
 2026-04-24 19:57:03.044305||Err: 'NoneType' object is not subscriptable
 2026-04-24 19:57:14.656256||Err: list indices must be integers or slices, not str
+2026-04-24 20:49:38.283195||Err: 'NoneType' object is not subscriptable
+2026-04-24 20:49:47.200194||Err: list indices must be integers or slices, not str
