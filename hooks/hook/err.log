@@ -692,3 +692,5 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2026-04-28 17:10:25.069601||Err: list indices must be integers or slices, not str
 2026-04-28 18:50:22.589905||Err: 'NoneType' object is not subscriptable
 2026-04-28 18:50:42.274651||Err: list indices must be integers or slices, not str
+2026-04-28 20:06:43.421410||Err: 'NoneType' object is not subscriptable
+2026-04-28 20:06:55.049184||Err: list indices must be integers or slices, not str
