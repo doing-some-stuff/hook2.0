@@ -706,3 +706,4 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.
 2026-04-29 08:37:02.166762||Err: name 'news' is not defined
 2026-04-29 10:29:11.551306||Err: name 'news' is not defined
 2026-04-29 12:03:54.467247||Err: name 'news' is not defined
+2026-04-29 14:25:25.775062||Err: name 'news' is not defined
