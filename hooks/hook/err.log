@@ -2,3 +2,4 @@
 2026-05-16 17:00:48.696403||Err: name 'news' is not defined
 2026-05-16 17:58:51.572158||Err: 'NoneType' object is not subscriptable
 2026-05-16 17:59:28.446250||Err: list indices must be integers or slices, not str
+2026-05-16 19:12:23.677570||Err: name 'news' is not defined
