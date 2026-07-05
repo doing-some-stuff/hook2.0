@@ -346,3 +346,5 @@
 2026-07-05 18:40:03.269842||Err: list index out of range
 2026-07-05 19:55:41.995180||Err: 'NoneType' object is not subscriptable
 2026-07-05 19:55:51.808387||Err: list index out of range
+2026-07-05 20:55:11.174258||Err: 'NoneType' object is not subscriptable
+2026-07-05 20:55:30.957316||Err: list index out of range
