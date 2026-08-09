@@ -112,6 +112,7 @@ def new():
 def hookgenerate(contentlist):
   with open(sentlogs,"+r") as ff:
     sentshows=ff.readlines()
+  print(contentlist)
   for show in contentlist:
     if f"{show[2]} - Episode {show[1]}\n" in sentshows:
       continue
@@ -139,7 +140,6 @@ def hookgenerate(contentlist):
 
 try:
   hookgenerate(new())
-  news()
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err C: {ee}\n"
