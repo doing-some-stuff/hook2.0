@@ -78,7 +78,7 @@ except Exception as ee:
     ff.write(err)
 	
 def new():
-    link = 'https://animepahe.com/api?m=airing&page=1'
+    link = 'https://animepahe.pw/api?m=airing&page=1'
     options = Options()
     options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
@@ -97,7 +97,6 @@ def new():
     ]
 	
     showsreleased=[]
-	print(allshowsreleased)
     for entry in allshowsreleased:
 	    title=rawshowtitle(entry[2].upper())
 	    if title in idexclude['romajii']:
