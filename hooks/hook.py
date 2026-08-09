@@ -97,6 +97,7 @@ def new():
     ]
 	
     showsreleased=[]
+	print(allshowsreleased)
     for entry in allshowsreleased:
 	    title=rawshowtitle(entry[2].upper())
 	    if title in idexclude['romajii']:
@@ -106,7 +107,6 @@ def new():
 	    if title in idexclude['eng']:
 		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
 		    showsreleased.append(entry)
-	print(allshowsreleased)
     return showsreleased
 
 def hookgenerate(contentlist):
