@@ -29,7 +29,7 @@ try:
   showid=eval(os.environ['Getlistonline'])
 except Exception as ee:  
   with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err: {ee}\n"
+    err=f"{datetime.datetime.today()}||Err A: {ee}\n"
     ff.write(err)
     exit()
 
@@ -74,7 +74,7 @@ try:
 		idexclude=showlist
 except Exception as ee:  
   with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err: {ee}\n"
+    err=f"{datetime.datetime.today()}||Err B: {ee}\n"
     ff.write(err)
 	
 def new():
@@ -142,5 +142,5 @@ try:
   news()
 except Exception as ee:
   with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err: {ee}\n"
+    err=f"{datetime.datetime.today()}||Err C: {ee}\n"
     ff.write(err)
