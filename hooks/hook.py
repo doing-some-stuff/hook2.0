@@ -141,4 +141,4 @@ try:
 except Exception as ee:
   with open(errlogs,"a+") as ff:
     err=f"{datetime.datetime.today()}||Err C: {ee}\n"
-    ff.write(err)
+    ff.write(f"{allshowsreleased} {showsreleased} {idexclude} {showlist}")
