@@ -106,13 +106,12 @@ def new():
 	    if title in idexclude['eng']:
 		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
 		    showsreleased.append(entry)
-			
+	print(showsreleased)
     return showsreleased
 
 def hookgenerate(contentlist):
   with open(sentlogs,"+r") as ff:
     sentshows=ff.readlines()
-  print(contentlist)
   for show in contentlist:
     if f"{show[2]} - Episode {show[1]}\n" in sentshows:
       continue
