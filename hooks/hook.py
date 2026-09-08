@@ -99,15 +99,16 @@ def new():
     # time.sleep(10)
     # pageviewer.refresh()
     # rawcontent=pageviewer.page_source;print(rawcontent)
-    with SB(uc=True, headless=False) as sb:
-        sb.uc_open_with_reconnect(link, reconnect_time=4)
+    with SB(uc=True, xvfb=True) as sb:
+        sb.uc_open_with_reconnect('https://animepahe.pw', reconnect_time=5)
+        time.sleep(3)
         try:
-            sb.uc_click("iframe[src*='turnstile']")
+            sb.uc_gui_click_captcha()
         except Exception:
             pass
-        
-    print("Page Title:", sb.get_page_title())
-    rawcontent = sb.get_page_source()
+        sb.uc_open_with_reconnect(link, reconnect_time=5)
+        time.sleep(3)
+        rawcontent = sb.get_page_source()
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
     response = json.loads(jsoncontent)
     allshowsreleased = [
