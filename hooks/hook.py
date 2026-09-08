@@ -6,9 +6,10 @@ import os
 import time
 import dotenv
 import datetime
-from selenium import webdriver as wdr
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.firefox.options import Options
+#from selenium import webdriver as wdr
+#from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.firefox.options import Options
+from seleniumbase import Driver
 
 sentlogs="./hooks/hook/contentlist.log"
 errlogs="./hooks/hook/err.log"
@@ -81,13 +82,18 @@ except Exception as ee:
 	
 def new():
     link = 'https://animepahe.pw/api?m=airing&page=1'
-    options = Options()
-    options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
-    pageviewer = wdr.Firefox(options=options)
-    pageviewer.get(link)
-    time.sleep(10)
-    pageviewer.refresh()
-    rawcontent=pageviewer.page_source;print(rawcontent)
+    #options = Options()
+    #options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
+    #pageviewer = wdr.Firefox(options=options)
+    #pageviewer.get(link)
+    #time.sleep(10)
+    #pageviewer.refresh()
+    #rawcontent=pageviewer.page_source;print(rawcontent)
+	driver = Driver(uc=True, headless2=True)
+    driver.get(link)
+    driver.sleep(5)
+    rawcontent=driver.page_source;print(rawcontent)
+    driver.quit()
     jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
