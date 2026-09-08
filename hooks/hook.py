@@ -108,7 +108,7 @@ def new():
             pass
         sb.uc_open_with_reconnect(link, reconnect_time=5)
         time.sleep(3)
-        rawcontent = sb.get_page_source()
+        rawcontent = sb.get_page_source();print(rawcontent)
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
     response = json.loads(jsoncontent)
     allshowsreleased = [
