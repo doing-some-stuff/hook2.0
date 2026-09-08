@@ -6,6 +6,7 @@ import os
 import time
 import dotenv
 import datetime
+import cloudscraper
 
 # from selenium import webdriver as wdr
 # from selenium.webdriver.support.ui import WebDriverWait
@@ -98,15 +99,21 @@ def new():
     # time.sleep(10)
     # pageviewer.refresh()
     # rawcontent=pageviewer.page_source;print(rawcontent)
-    with SB(uc=True, headless2=True, xvfb=True) as sb:
-        sb.driver.uc_open_with_reconnect('https://animepahe.pw', 4)
-        time.sleep(5)
-        sb.driver.uc_open_with_reconnect(link, 4)
-        time.sleep(3)
-        rawcontent = sb.driver.page_source
-    print(rawcontent)
+    scraper = cloudscraper.create_scraper(
+    browser={
+        'browser': 'chrome',
+        'platform': 'windows',
+        'desktop': True
+    }
+    )
+    headers = {
+    'Referer': 'https://animepahe.pw',
+    'Accept-Language': 'en-US,en;q=0.9',
+    }
+    response = scraper.get(link, headers=headers)
+    rawcontent=response.text
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
-    response = json.loads(jsoncontent)
+    response = json.loads(jsoncontent);print(response)
     allshowsreleased = [
         [
             "{}/{}".format(x["anime_session"], x["session"]),
