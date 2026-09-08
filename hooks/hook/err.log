@@ -3,3 +3,5 @@
 
 2026-09-08 12:11:38.260617||Err B: 'NoneType' object is not subscriptable
 [] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:11:48.052641||Err C: list index out of range
+2026-09-08 12:14:15.911766||Err B: 'NoneType' object is not subscriptable
+[] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:14:49.633090||Err C: list index out of range
