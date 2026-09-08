@@ -105,7 +105,6 @@ def new():
         time.sleep(3)
         rawcontent = sb.driver.page_source
     print(rawcontent)
-    driver.quit()
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
     response = json.loads(jsoncontent)
     allshowsreleased = [
