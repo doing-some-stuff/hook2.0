@@ -3,6 +3,7 @@ import requests
 import json
 import re
 import os
+import time
 import dotenv
 import datetime
 from selenium import webdriver as wdr
@@ -84,7 +85,7 @@ def new():
     options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
-    WebDriverWait(pageviewer, 15)
+    time.sleep(10)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source;print(rawcontent)
     jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
