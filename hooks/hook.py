@@ -111,9 +111,9 @@ def new():
     'Accept-Language': 'en-US,en;q=0.9',
     }
     response = scraper.get(link, headers=headers)
-    rawcontent=response.text
+    rawcontent=response.text;print(rawcontent)
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
-    response = json.loads(jsoncontent);print(response)
+    response = json.loads(jsoncontent)
     allshowsreleased = [
         [
             "{}/{}".format(x["anime_session"], x["session"]),
