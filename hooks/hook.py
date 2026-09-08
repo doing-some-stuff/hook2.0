@@ -82,12 +82,13 @@ except Exception as ee:
 def new():
     link = 'https://animepahe.pw/api?m=airing&page=1'
     options = Options()
-    options.set_preference('devtools.jsonview.enabled', False)
+    options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
     WebDriverWait(pageviewer, 8)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source
+	print(rawcontent)
     jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
