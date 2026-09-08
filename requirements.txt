@@ -3,3 +3,4 @@ discord-webhook
 python-dotenv
 Selenium
 seleniumbase
+cloudscraper
