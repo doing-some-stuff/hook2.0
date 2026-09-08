@@ -57,7 +57,7 @@ try:
 		url = 'https://graphql.anilist.co'
 		showlist={'eng':[],'romaji':[],'romajii':[]}
 		for idd in ids:
-			variables = {'id': idd }
+			variables = {'id': int(idd) }
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
