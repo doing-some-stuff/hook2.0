@@ -9,3 +9,5 @@
 [] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:16:55.800109||Err C: list index out of range
 2026-09-08 12:17:44.429443||Err B: 'NoneType' object is not subscriptable
 [] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:18:00.520656||Err C: list index out of range
+2026-09-08 12:20:00.402834||Err B: 'NoneType' object is not subscriptable
+[] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:20:26.878451||Err C: list index out of range
