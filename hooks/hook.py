@@ -10,7 +10,7 @@ import datetime
 # from selenium import webdriver as wdr
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.firefox.options import Options
-from seleniumbase import Driver
+from seleniumbase import SB
 
 sentlogs = "./hooks/hook/contentlist.log"
 errlogs = "./hooks/hook/err.log"
@@ -98,10 +98,12 @@ def new():
     # time.sleep(10)
     # pageviewer.refresh()
     # rawcontent=pageviewer.page_source;print(rawcontent)
-    driver = Driver(uc=True, headless2=True)
-    driver.get(link)
-    driver.sleep(25)
-    rawcontent = driver.page_source
+    with SB(uc=True, headless2=True, xvfb=True) as sb:
+        sb.driver.uc_open_with_reconnect('https://animepahe.pw', 4)
+        time.sleep(5)
+        sb.driver.uc_open_with_reconnect(link, 4)
+        time.sleep(3)
+        rawcontent = sb.driver.page_source
     print(rawcontent)
     driver.quit()
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
