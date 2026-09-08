@@ -32,7 +32,6 @@ except Exception as ee:
     err=f"{datetime.datetime.today()}||Err A: {ee}\n"
     ff.write(err)
     exit()
-
 query = '''
 query ($idname: String) {
   Page {
@@ -87,8 +86,7 @@ def new():
     pageviewer.get(link)
     WebDriverWait(pageviewer, 8)
     pageviewer.refresh()
-    rawcontent=pageviewer.page_source
-	print(rawcontent)
+    rawcontent=pageviewer.page_source;print(rawcontent)
     jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
     response =json.loads(jsoncontent)
     allshowsreleased=[
