@@ -957,4 +957,6 @@
 [] {'eng': [], 'romaji': [], 'romajii': []}2026-09-08 06:22:54.479596||Err B: 'NoneType' object is not subscriptable
 [] {'eng': [], 'romaji': [], 'romajii': []}2026-09-08 11:30:55.841746||Err B: 'NoneType' object is not subscriptable
 [] {'eng': [], 'romaji': [], 'romajii': []}2026-09-08 11:40:03.385917||Err B: 'NoneType' object is not subscriptable
-[] {'eng': [], 'romaji': [], 'romajii': []}
+[] {'eng': [], 'romaji': [], 'romajii': []}2026-09-08 11:45:08.317631||Err B: 'NoneType' object is not subscriptable
+[] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 11:45:11.199789||Err C: Message: Process (pid=2419) unexpectedly closed with status 1
+
