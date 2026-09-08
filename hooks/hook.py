@@ -34,12 +34,12 @@ except Exception as ee:
     exit()
 
 query = '''
-query ($id: Int) {
+query ($idname: String) {
   Page {
     pageInfo {
       hasNextPage
     }
-    mediaList(userId: $id, type: ANIME, status_in: [CURRENT, REPEATING]) {
+    mediaList(userName: $idname, type: ANIME, status_in: [CURRENT, REPEATING]) {
       media {
         title {
           romaji
@@ -57,7 +57,7 @@ try:
 		url = 'https://graphql.anilist.co'
 		showlist={'eng':[],'romaji':[],'romajii':[]}
 		for idd in ids:
-			variables = {'id': int(idd) }
+			variables = {'idname': idd}
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
