@@ -100,7 +100,7 @@ def new():
     # rawcontent=pageviewer.page_source;print(rawcontent)
     driver = Driver(uc=True, headless2=True)
     driver.get(link)
-    driver.sleep(5)
+    driver.sleep(25)
     rawcontent = driver.page_source
     print(rawcontent)
     driver.quit()
