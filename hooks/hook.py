@@ -80,7 +80,7 @@ except Exception as ee:
 def new():
     link = 'https://animepahe.pw/api?m=airing&page=1'
     options = Options()
-    options.set_preference('devtools.jsonview.enabled', False)
+    options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
     WebDriverWait(pageviewer, 8)
