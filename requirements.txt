@@ -1,4 +1,5 @@
-requests
+Requests >= 2.9.2
+requests_toolbelt >= 0.9.1
 discord-webhook
 python-dotenv
 Selenium
