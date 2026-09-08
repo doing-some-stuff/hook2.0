@@ -84,7 +84,7 @@ def new():
     options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
     pageviewer = wdr.Firefox(options=options)
     pageviewer.get(link)
-    WebDriverWait(pageviewer, 8)
+    WebDriverWait(pageviewer, 15)
     pageviewer.refresh()
     rawcontent=pageviewer.page_source;print(rawcontent)
     jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
