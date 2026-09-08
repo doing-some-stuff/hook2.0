@@ -1,3 +1,5 @@
 2026-09-08 11:50:45.967528||Err B: 'NoneType' object is not subscriptable
 [] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 11:50:50.398055||Err C: Message: Process (pid=2403) unexpectedly closed with status 1
 
+2026-09-08 12:11:38.260617||Err B: 'NoneType' object is not subscriptable
+[] {'eng': [], 'romaji': [], 'romajii': []} 2026-09-08 12:11:48.052641||Err C: list index out of range
