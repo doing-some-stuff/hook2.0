@@ -6,12 +6,7 @@ import os
 import time
 import dotenv
 import datetime
-import cloudscraper
-
-# from selenium import webdriver as wdr
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.firefox.options import Options
-from seleniumbase import SB
+import undetected_chromedriver as uc
 
 sentlogs = "./hooks/hook/contentlist.log"
 errlogs = "./hooks/hook/err.log"
@@ -99,16 +94,19 @@ def new():
     # time.sleep(10)
     # pageviewer.refresh()
     # rawcontent=pageviewer.page_source;print(rawcontent)
-    with SB(uc=True, xvfb=True) as sb:
-        sb.uc_open_with_reconnect('https://animepahe.pw', reconnect_time=5)
-        time.sleep(3)
-        try:
-            sb.uc_gui_click_captcha()
-        except Exception:
-            pass
-        sb.uc_open_with_reconnect(link, reconnect_time=5)
-        time.sleep(3)
-        rawcontent = sb.get_page_source();print(rawcontent)
+    options = uc.ChromeOptions()
+    options.headless = False 
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = uc.Chrome(options=options)
+    try:
+        driver.get('https://animepahe.pw')
+        time.sleep(7) 
+        driver.get(link)
+        time.sleep(5)
+        rawcontent = driver.page_source;print(rawcontent)
+    finally:
+        driver.quit()
     jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
     response = json.loads(jsoncontent)
     allshowsreleased = [
