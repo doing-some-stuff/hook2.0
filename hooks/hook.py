@@ -1,4 +1,4 @@
-from discord_webhook import DiscordWebhook,DiscordEmbed
+from discord_webhook import DiscordWebhook, DiscordEmbed
 import requests
 import json
 import re
@@ -6,35 +6,39 @@ import os
 import time
 import dotenv
 import datetime
-#from selenium import webdriver as wdr
-#from selenium.webdriver.support.ui import WebDriverWait
-#from selenium.webdriver.firefox.options import Options
+
+# from selenium import webdriver as wdr
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.firefox.options import Options
 from seleniumbase import Driver
 
-sentlogs="./hooks/hook/contentlist.log"
-errlogs="./hooks/hook/err.log"
+sentlogs = "./hooks/hook/contentlist.log"
+errlogs = "./hooks/hook/err.log"
 if not os.path.exists(sentlogs):
-  with open(sentlogs,"w") as ff:
-    pass
-if not os.path.exists(errlogs):
-    with open(errlogs,"w") as ff:
+    with open(sentlogs, "w") as ff:
         pass
+if not os.path.exists(errlogs):
+    with open(errlogs, "w") as ff:
+        pass
+
+
 def rawshowtitle(title):
-    return ''.join(a for a in title if a.isalnum())
+    return "".join(a for a in title if a.isalnum())
+
 
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 try:
-  idexclude=eval(os.environ['Showswatching'])
-  rune=os.environ['Rune']
-  hooklink=os.environ['Hooksecret']
-  showid=eval(os.environ['Getlistonline'])
-except Exception as ee:  
-  with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err A: {ee}\n"
-    ff.write(err)
-    exit()
-query = '''
+    idexclude = eval(os.environ["Showswatching"])
+    rune = os.environ["Rune"]
+    hooklink = os.environ["Hooksecret"]
+    showid = eval(os.environ["Getlistonline"])
+except Exception as ee:
+    with open(errlogs, "a+") as ff:
+        err = f"{datetime.datetime.today()}||Err A: {ee}\n"
+        ff.write(err)
+        exit()
+query = """
 query ($idname: String) {
   Page {
     pageInfo {
@@ -44,109 +48,117 @@ query ($idname: String) {
       media {
         title {
           romaji
-	  english
+   english
         }
         siteUrl
       }
     }
   }
 }
-'''
+"""
 try:
-	if showid:
-		ids=eval(os.environ['Idlist'])
-		print(ids,type(ids))
-		url = 'https://graphql.anilist.co'
-		showlist={'eng':[],'romaji':[],'romajii':[]}
-		for idd in ids:
-			variables = {'idname': idd}
-			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
-			print(requestdata)
-			for show in requestdata['data']['Page']['mediaList']:
-				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
-				if nam[0] is None:
-					nam[0]=""
-				if nam[1] is None:
-					nam[1]=""
-				if nam[0] not in showlist['romaji']:
-					showlist['romajii'].append(rawshowtitle(nam[0].upper()))
-					showlist['eng'].append(rawshowtitle(nam[1].upper()))
-					showlist['romaji'].append(nam[0])
-			
-					
-		idexclude=showlist
-except Exception as ee:  
-  with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err B: {ee}\n"
-    ff.write(err)
-	
+    if showid:
+        ids = eval(os.environ["Idlist"])
+        print(ids, type(ids))
+        url = "https://graphql.anilist.co"
+        showlist = {"eng": [], "romaji": [], "romajii": []}
+        for idd in ids:
+            variables = {"idname": idd}
+            requestdata = requests.post(
+                url, json={"query": query, "variables": variables}
+            ).json()
+            print(requestdata)
+            for show in requestdata["data"]["Page"]["mediaList"]:
+                nam = [
+                    show["media"]["title"]["romaji"],
+                    show["media"]["title"]["english"],
+                ]
+                if nam[0] is None:
+                    nam[0] = ""
+                if nam[1] is None:
+                    nam[1] = ""
+                if nam[0] not in showlist["romaji"]:
+                    showlist["romajii"].append(rawshowtitle(nam[0].upper()))
+                    showlist["eng"].append(rawshowtitle(nam[1].upper()))
+                    showlist["romaji"].append(nam[0])
+
+        idexclude = showlist
+except Exception as ee:
+    with open(errlogs, "a+") as ff:
+        err = f"{datetime.datetime.today()}||Err B: {ee}\n"
+        ff.write(err)
+
+
 def new():
-    link = 'https://animepahe.pw/api?m=airing&page=1'
-    #options = Options()
-    #options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
-    #pageviewer = wdr.Firefox(options=options)
-    #pageviewer.get(link)
-    #time.sleep(10)
-    #pageviewer.refresh()
-    #rawcontent=pageviewer.page_source;print(rawcontent)
-	driver = Driver(uc=True, headless2=True)
+    link = "https://animepahe.pw/api?m=airing&page=1"
+    # options = Options()
+    # options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
+    # pageviewer = wdr.Firefox(options=options)
+    # pageviewer.get(link)
+    # time.sleep(10)
+    # pageviewer.refresh()
+    # rawcontent=pageviewer.page_source;print(rawcontent)
+    driver = Driver(uc=True, headless2=True)
     driver.get(link)
     driver.sleep(5)
-    rawcontent=driver.page_source;print(rawcontent)
+    rawcontent = driver.page_source
+    print(rawcontent)
     driver.quit()
-    jsoncontent=re.findall('<pre>(.*?)</pre>', rawcontent, re.DOTALL)[0]
-    response =json.loads(jsoncontent)
-    allshowsreleased=[
+    jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
+    response = json.loads(jsoncontent)
+    allshowsreleased = [
         [
-            '{}/{}'.format(x['anime_session'], x['session']),
-            x['episode'],
-            x['anime_title'],x['snapshot']
-        ] for x in response['data']
+            "{}/{}".format(x["anime_session"], x["session"]),
+            x["episode"],
+            x["anime_title"],
+            x["snapshot"],
+        ]
+        for x in response["data"]
     ]
-	
-    showsreleased=[]
+
+    showsreleased = []
     for entry in allshowsreleased:
-	    title=rawshowtitle(entry[2].upper())
-	    if title in idexclude['romajii']:
-		    showsreleased.append(entry)
-		    continue
-			
-	    if title in idexclude['eng']:
-		    entry[2]=idexclude['romaji'][idexclude['eng'].index(title)] #aovid eng
-		    showsreleased.append(entry)
+        title = rawshowtitle(entry[2].upper())
+        if title in idexclude["romajii"]:
+            showsreleased.append(entry)
+            continue
+
+        if title in idexclude["eng"]:
+            entry[2] = idexclude["romaji"][idexclude["eng"].index(title)]  # aovid eng
+            showsreleased.append(entry)
     return showsreleased
 
+
 def hookgenerate(contentlist):
-  with open(sentlogs,"+r") as ff:
-    sentshows=ff.readlines()
-  for show in contentlist:
-    if f"{show[2]} - Episode {show[1]}\n" in sentshows:
-      continue
-    try:
-      text=f"# {rune}  |  [{show[2]} - Episode {show[1]}](<https://animepahe.com/play/{show[0]}>)\n[Main Page](https://animepahe.com/play/{show[0]}*)"
-      webhook = DiscordWebhook(url=hooklink,content=text)
-      webhook.execute()
-      entrno=len(sentshows)
-      title=f"{show[2]} - Episode {show[1]}\n"
-      if entrno>18:
-        with open(sentlogs,"w") as ff:
-          newsshow=''.join(sentshows[8:])
-          ff.write(newsshow)
-        with open(errlogs,"w") as ff:
-          pass
-        
-      with open(sentlogs,"a+") as ff:
-        ff.write(title)
-    except Exception as ee:
-      with open(errlogs,"a+") as ff:
-                err=f"{datetime.datetime.today()}||Webhook Err: {ee}\n"
+    with open(sentlogs, "+r") as ff:
+        sentshows = ff.readlines()
+    for show in contentlist:
+        if f"{show[2]} - Episode {show[1]}\n" in sentshows:
+            continue
+        try:
+            text = f"# {rune}  |  [{show[2]} - Episode {show[1]}](<https://animepahe.com/play/{show[0]}>)\n[Main Page](https://animepahe.com/play/{show[0]}*)"
+            webhook = DiscordWebhook(url=hooklink, content=text)
+            webhook.execute()
+            entrno = len(sentshows)
+            title = f"{show[2]} - Episode {show[1]}\n"
+            if entrno > 18:
+                with open(sentlogs, "w") as ff:
+                    newsshow = "".join(sentshows[8:])
+                    ff.write(newsshow)
+                with open(errlogs, "w") as ff:
+                    pass
+
+            with open(sentlogs, "a+") as ff:
+                ff.write(title)
+        except Exception as ee:
+            with open(errlogs, "a+") as ff:
+                err = f"{datetime.datetime.today()}||Webhook Err: {ee}\n"
                 ff.write(err)
 
 
-
 try:
-  hookgenerate(new())
+    hookgenerate(new())
 except Exception as ee:
-  with open(errlogs,"a+") as ff:
-    err=f"{datetime.datetime.today()}||Err C: {ee}\n"
-    ff.write(f"{idexclude} {showlist} {err}")
+    with open(errlogs, "a+") as ff:
+        err = f"{datetime.datetime.today()}||Err C: {ee}\n"
+        ff.write(f"{idexclude} {showlist} {err}")
