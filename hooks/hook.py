@@ -60,6 +60,7 @@ try:
 		for idd in ids:
 			variables = {'idname': idd}
 			requestdata = requests.post(url, json={'query': query, 'variables': variables}).json()
+			print(requestdata)
 			for show in requestdata['data']['Page']['mediaList']:
 				nam=[show['media']['title']['romaji'],show['media']['title']['english']]
 				if nam[0] is None:
