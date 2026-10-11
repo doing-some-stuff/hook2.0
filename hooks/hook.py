@@ -77,6 +77,7 @@ try:
                 ]
                 print(nam)
                 print(show["media"]["nextAiringEpisode"]["episode"])
+                print("okay")
                 if show["media"]["nextAiringEpisode"]["episode"] is None:
                     if show["media"]["episodes"] is None:
                         show["media"]["nextAiringEpisode"]["episode"]=1
