@@ -96,6 +96,7 @@ except Exception as ee:
 
 
 def hookgenerate(contentlist):
+    print(contentlist)
     with open(sentlogs, "+r") as ff:
         sentshows = ff.readlines()
     for show in contentlist:
@@ -104,7 +105,7 @@ def hookgenerate(contentlist):
         try:
             text = f"# {rune}  |  [{show[0]} - Episode {show[1]}]\n[Pic]({show[2]})"
             webhook = DiscordWebhook(url=hooklink, content=text)
-            webhook.execute()
+            #webhook.execute()
             entrno = len(sentshows)
             title = f"{show[2]} - Episode {show[1]}\n"
             if entrno > 18:
