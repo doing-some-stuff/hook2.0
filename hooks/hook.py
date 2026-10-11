@@ -107,7 +107,7 @@ except Exception as ee:
 
 
 def hookgenerate(contentlist):
-    print(contentlist)
+    #print(contentlist)
     with open(sentlogs, "+r") as ff:
         sentshows = ff.readlines()
     for show in contentlist:
