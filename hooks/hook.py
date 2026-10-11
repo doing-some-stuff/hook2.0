@@ -114,7 +114,7 @@ def hookgenerate(contentlist):
             webhook = DiscordWebhook(url=hooklink, content=text)
             webhook.execute()
             entrno = len(sentshows)
-            title = f"{show[2]} - Episode {show[1]}\n"
+            title = f"{show[0]} - Episode {show[1]}\n"
             if entrno > 18:
                 with open(sentlogs, "w") as ff:
                     newsshow = "".join(sentshows[8:])
