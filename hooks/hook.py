@@ -59,7 +59,7 @@ query ($idname: String) {
 try:
     if showid:
         ids = eval(os.environ["Idlist"])
-        #print(ids, type(ids))
+        print(ids, type(ids))
         url = "https://graphql.anilist.co"
         showlist = {"eng": [], "romaji": [], "romajii": [],"epno":[]}
         showlist2=[]
