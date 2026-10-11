@@ -68,7 +68,9 @@ try:
                 url, json={"query": query, "variables": variables}
             ).json()
             print(requestdata)
+            print("start")
             for show in requestdata["data"]["Page"]["mediaList"]:
+                print("yes")
                 nam = [
                     show["media"]["title"]["romaji"],
                     show["media"]["title"]["english"],
