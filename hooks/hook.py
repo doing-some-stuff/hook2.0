@@ -94,7 +94,7 @@ try:
                 showlist["romajii"].append(rawshowtitle(nam[0].upper()))
                 showlist["eng"].append(rawshowtitle(nam[1].upper()))
                 showlist["romaji"].append(nam[0])
-                showlist["epno"].append(show["media"]["nextAiringEpisode"]["episode"])
+                showlist["epno"].append(epsss)
                 showlist2.append([nam[0],epsss,show["media"]["coverImage"]["large"]])
                 print(showlist2)
 
