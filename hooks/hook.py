@@ -54,6 +54,7 @@ query ($idname: String) {
     }
   }
 }
+}
 """
 try:
     if showid:
