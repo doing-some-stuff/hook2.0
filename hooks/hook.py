@@ -81,6 +81,7 @@ try:
                 if nam[1] is None:
                     nam[1] = ""
                 if nam[0] not in showlist["romaji"]:
+                    print(show)
                     showlist["romajii"].append(rawshowtitle(nam[0].upper()))
                     showlist["eng"].append(rawshowtitle(nam[1].upper()))
                     showlist["romaji"].append(nam[0])
