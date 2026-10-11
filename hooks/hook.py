@@ -76,13 +76,13 @@ try:
                     show["media"]["title"]["english"],
                 ]
                 print(nam)
-                print(show["media"]["nextAiringEpisode"]["episode"])
-                print("okay")
                 if show["media"]["nextAiringEpisode"]["episode"] is None:
                     if show["media"]["episodes"] is None:
                         show["media"]["nextAiringEpisode"]["episode"]=1
                     else:
                         show["media"]["nextAiringEpisode"]["episode"]=show["media"]["episodes"]
+                print(show["media"]["nextAiringEpisode"]["episode"])
+                print("okay")
                 if nam[0] is None:
                     nam[0] = ""
                 if nam[1] is None:
