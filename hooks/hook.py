@@ -96,7 +96,7 @@ def hookgenerate(contentlist):
     with open(sentlogs, "+r") as ff:
         sentshows = ff.readlines()
     for show in contentlist:
-        if f"{show[0]} - Episode {int(show[1])-1}\n" in sentshows:
+        if f"{show[0]} - Episode {show[1]}\n" in sentshows:
             continue
         try:
             text = f"# {rune}  |  [{show[0]} - Episode {show[1]}]\n[Pic]({show[2]})"
