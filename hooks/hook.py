@@ -77,11 +77,15 @@ try:
                 #print(nam)
                 if show["media"]["nextAiringEpisode"] is None:
                     if show["media"]["episodes"] is None:
-                        epsss=1
+                        epsss="Yet to start"
                     else:
                         epsss=show["media"]["episodes"]
                 else:
-                    epsss=show["media"]["nextAiringEpisode"]["episode"]
+                    if show["media"]["episodes"] is None:
+                        epsss=show["media"]["nextAiringEpisode"]["episode"]
+                    else:
+                        epsss=show["media"]["nextAiringEpisode"]["episode"]-1
+                
                 #print(epsss)
                 if nam[0] is None:
                     nam[0] = ""
