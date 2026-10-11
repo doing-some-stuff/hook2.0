@@ -59,7 +59,7 @@ query ($idname: String) {
 try:
     if showid:
         ids = eval(os.environ["Idlist"])
-        print(ids, type(ids))
+        #print(ids, type(ids))
         url = "https://graphql.anilist.co"
         showlist = {"eng": [], "romaji": [], "romajii": [],"epno":[]}
         showlist2=[]
@@ -68,8 +68,6 @@ try:
             requestdata = requests.post(
                 url, json={"query": query, "variables": variables}
             ).json()
-            print(requestdata)
-            print("start")
             for show in requestdata["data"]["Page"]["mediaList"]:
                 print("yes")
                 nam = [
