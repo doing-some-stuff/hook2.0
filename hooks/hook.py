@@ -77,19 +77,22 @@ try:
                 ]
                 print(nam)
                 if show["media"]["nextAiringEpisode"]["episode"] is None:
-                    show["media"]["nextAiringEpisode"]["episode"]=show["media"]["episodes"]
+                    if show["media"]["episodes"] is None:
+                        show["media"]["nextAiringEpisode"]["episode"]=1
+                    else:
+                        show["media"]["nextAiringEpisode"]["episode"]=show["media"]["episodes"]
                 if nam[0] is None:
                     nam[0] = ""
                 if nam[1] is None:
                     nam[1] = ""
-                if nam[0] not in showlist["romaji"]:
-                    print(show)
-                    showlist["romajii"].append(rawshowtitle(nam[0].upper()))
-                    showlist["eng"].append(rawshowtitle(nam[1].upper()))
-                    showlist["romaji"].append(nam[0])
-                    showlist["epno"].append(show["media"]["nextAiringEpisode"]["episode"])
-                    showlist2.append([nam[0],show["media"]["nextAiringEpisode"]["episode"],show["media"]["coverImage"]["large"]])
-                    print(showlist2)
+                
+                print(show)
+                showlist["romajii"].append(rawshowtitle(nam[0].upper()))
+                showlist["eng"].append(rawshowtitle(nam[1].upper()))
+                showlist["romaji"].append(nam[0])
+                showlist["epno"].append(show["media"]["nextAiringEpisode"]["episode"])
+                showlist2.append([nam[0],show["media"]["nextAiringEpisode"]["episode"],show["media"]["coverImage"]["large"]])
+                print(showlist2)
 
         idexclude = showlist2
 except Exception as ee:
