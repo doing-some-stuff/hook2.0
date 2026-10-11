@@ -50,7 +50,7 @@ query ($idname: String) {
         nextAiringEpisode {
           episode
       }
-      coverImage{large}
+      coverImage{extraLarge}
     }
   }
 }
@@ -96,7 +96,7 @@ try:
                 showlist["eng"].append(rawshowtitle(nam[1].upper()))
                 showlist["romaji"].append(nam[0])
                 showlist["epno"].append(epsss)
-                showlist2.append([nam[0],epsss,show["media"]["coverImage"]["large"]])
+                showlist2.append([nam[0],epsss,show["media"]["coverImage"]["extraLarge"]])
 
         idexclude = showlist2
 except Exception as ee:
