@@ -59,7 +59,7 @@ query ($idname: String) {
 try:
     if showid:
         ids = eval(os.environ["Idlist"])
-        print(ids, type(ids))
+        #print(ids, type(ids))
         url = "https://graphql.anilist.co"
         showlist = {"eng": [], "romaji": [], "romajii": [],"epno":[]}
         showlist2=[]
@@ -68,14 +68,13 @@ try:
             requestdata = requests.post(
                 url, json={"query": query, "variables": variables}
             ).json()
-            print(idd)
+            #print(idd)
             for show in requestdata["data"]["Page"]["mediaList"]:
-                print("yes")
                 nam = [
                     show["media"]["title"]["romaji"],
                     show["media"]["title"]["english"],
                 ]
-                print(nam)
+                #print(nam)
                 if show["media"]["nextAiringEpisode"] is None:
                     if show["media"]["episodes"] is None:
                         epsss=1
@@ -83,26 +82,24 @@ try:
                         epsss=show["media"]["episodes"]
                 else:
                     epsss=show["media"]["nextAiringEpisode"]["episode"]
-                print(epsss)
-                print("okay")
+                #print(epsss)
                 if nam[0] is None:
                     nam[0] = ""
                 if nam[1] is None:
                     nam[1] = ""
                 
-                print(show)
                 showlist["romajii"].append(rawshowtitle(nam[0].upper()))
                 showlist["eng"].append(rawshowtitle(nam[1].upper()))
                 showlist["romaji"].append(nam[0])
                 showlist["epno"].append(epsss)
                 showlist2.append([nam[0],epsss,show["media"]["coverImage"]["large"]])
-                print(showlist2)
 
         idexclude = showlist2
 except Exception as ee:
     with open(errlogs, "a+") as ff:
         err = f"{datetime.datetime.today()}||Err B: {ee}\n"
         ff.write(err)
+    exit()
 
 
 def hookgenerate(contentlist):
@@ -115,7 +112,7 @@ def hookgenerate(contentlist):
         try:
             text = f"# {rune}  |  [{show[0]} - Episode {show[1]}]\n[Pic]({show[2]})"
             webhook = DiscordWebhook(url=hooklink, content=text)
-            #webhook.execute()
+            webhook.execute()
             entrno = len(sentshows)
             title = f"{show[2]} - Episode {show[1]}\n"
             if entrno > 18:
