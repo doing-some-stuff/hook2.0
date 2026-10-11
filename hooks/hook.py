@@ -75,6 +75,7 @@ try:
                     show["media"]["title"]["romaji"],
                     show["media"]["title"]["english"],
                 ]
+                print(nam)
                 if nam[0] is None:
                     nam[0] = ""
                 if nam[1] is None:
