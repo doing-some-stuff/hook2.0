@@ -76,12 +76,14 @@ try:
                     show["media"]["title"]["english"],
                 ]
                 print(nam)
-                if show["media"]["nextAiringEpisode"]["episode"] is None:
+                if show["media"]["nextAiringEpisode"] is None:
                     if show["media"]["episodes"] is None:
-                        show["media"]["nextAiringEpisode"]["episode"]=1
+                        epsss=1
                     else:
-                        show["media"]["nextAiringEpisode"]["episode"]=show["media"]["episodes"]
-                print(show["media"]["nextAiringEpisode"]["episode"])
+                        epsss=show["media"]["episodes"]
+                else:
+                    epsss=show["media"]["nextAiringEpisode"]["episode"]
+                print(epsss)
                 print("okay")
                 if nam[0] is None:
                     nam[0] = ""
@@ -93,7 +95,7 @@ try:
                 showlist["eng"].append(rawshowtitle(nam[1].upper()))
                 showlist["romaji"].append(nam[0])
                 showlist["epno"].append(show["media"]["nextAiringEpisode"]["episode"])
-                showlist2.append([nam[0],show["media"]["nextAiringEpisode"]["episode"],show["media"]["coverImage"]["large"]])
+                showlist2.append([nam[0],epsss,show["media"]["coverImage"]["large"]])
                 print(showlist2)
 
         idexclude = showlist2
