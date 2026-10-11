@@ -68,6 +68,7 @@ try:
             requestdata = requests.post(
                 url, json={"query": query, "variables": variables}
             ).json()
+            print(idd)
             for show in requestdata["data"]["Page"]["mediaList"]:
                 print("yes")
                 nam = [
