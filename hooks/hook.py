@@ -6,7 +6,6 @@ import os
 import time
 import dotenv
 import datetime
-import undetected_chromedriver as uc
 
 sentlogs = "./hooks/hook/contentlist.log"
 errlogs = "./hooks/hook/err.log"
@@ -47,7 +46,11 @@ query ($idname: String) {
    english
         }
         siteUrl
+        episodes
+        nextAiringEpisode {
+          episode
       }
+      coverImage{large}
     }
   }
 }
@@ -57,7 +60,8 @@ try:
         ids = eval(os.environ["Idlist"])
         print(ids, type(ids))
         url = "https://graphql.anilist.co"
-        showlist = {"eng": [], "romaji": [], "romajii": []}
+        showlist = {"eng": [], "romaji": [], "romajii": [],"epno":[]}
+        showlist2=[]
         for idd in ids:
             variables = {"idname": idd}
             requestdata = requests.post(
@@ -77,69 +81,25 @@ try:
                     showlist["romajii"].append(rawshowtitle(nam[0].upper()))
                     showlist["eng"].append(rawshowtitle(nam[1].upper()))
                     showlist["romaji"].append(nam[0])
+                    showlist["epno"].append(show["episode"])
+                    showlist2.append([nam[0],show["nextAiringEpisode"]["episode"],show["coverImage"]["large"]])
+                    print(showlist2)
 
-        idexclude = showlist
+        idexclude = showlist2
 except Exception as ee:
     with open(errlogs, "a+") as ff:
         err = f"{datetime.datetime.today()}||Err B: {ee}\n"
         ff.write(err)
 
 
-def new():
-    link = "https://animepahe.pw/api?m=airing&page=1"
-    # options = Options()
-    # options.set_preference('devtools.jsonview.enabled', False);options.add_argument("--headless")
-    # pageviewer = wdr.Firefox(options=options)
-    # pageviewer.get(link)
-    # time.sleep(10)
-    # pageviewer.refresh()
-    # rawcontent=pageviewer.page_source;print(rawcontent)
-    options = uc.ChromeOptions()
-    options.headless = False 
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    driver = uc.Chrome(options=options)
-    try:
-        driver.get('https://animepahe.pw')
-        time.sleep(7) 
-        driver.get(link)
-        time.sleep(5)
-        rawcontent = driver.page_source;print(rawcontent)
-    finally:
-        driver.quit()
-    jsoncontent = re.findall("<pre>(.*?)</pre>", rawcontent, re.DOTALL)[0]
-    response = json.loads(jsoncontent)
-    allshowsreleased = [
-        [
-            "{}/{}".format(x["anime_session"], x["session"]),
-            x["episode"],
-            x["anime_title"],
-            x["snapshot"],
-        ]
-        for x in response["data"]
-    ]
-
-    showsreleased = []
-    for entry in allshowsreleased:
-        title = rawshowtitle(entry[2].upper())
-        if title in idexclude["romajii"]:
-            showsreleased.append(entry)
-            continue
-
-        if title in idexclude["eng"]:
-            entry[2] = idexclude["romaji"][idexclude["eng"].index(title)]  # aovid eng
-            showsreleased.append(entry)
-    return showsreleased
-
-
 def hookgenerate(contentlist):
     with open(sentlogs, "+r") as ff:
         sentshows = ff.readlines()
     for show in contentlist:
-        if f"{show[2]} - Episode {show[1]}\n" in sentshows:
+        if f"{show[0]} - Episode {int(show[1])-1}\n" in sentshows:
             continue
         try:
-            text = f"# {rune}  |  [{show[2]} - Episode {show[1]}](<https://animepahe.com/play/{show[0]}>)\n[Main Page](https://animepahe.com/play/{show[0]}*)"
+            text = f"# {rune}  |  [{show[0]} - Episode {show[1]}]\n[Pic]({show[2]})"
             webhook = DiscordWebhook(url=hooklink, content=text)
             webhook.execute()
             entrno = len(sentshows)
@@ -160,7 +120,7 @@ def hookgenerate(contentlist):
 
 
 try:
-    hookgenerate(new())
+    hookgenerate(idexclude)
 except Exception as ee:
     with open(errlogs, "a+") as ff:
         err = f"{datetime.datetime.today()}||Err C: {ee}\n"
